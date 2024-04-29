@@ -7,20 +7,18 @@
     scroll-behavior: smooth;
 }
 
+
 header{
-
     width: 100%;
-
 }
 
 .topbarContainer{
-
     width: 100%;
     align-items: center;
 
 }
-.topbar{
-
+#topbar{
+    overflow: hidden;
     position: relative;
     width: 80%;
     align-items: center;
@@ -30,30 +28,24 @@ header{
     box-shadow: 0px 0.5px 5px 5px rgb(94, 152, 172);
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
-
 }
-.topbar > *{
-
+#topbar > *{
     margin: auto;
 
 }
 
 .searching-div{
-
     display: flex;
     align-items: center;
-
+    width: fit-content;
 }
 .searching-div > *{
-
     margin: 5px;
-
 }
 
-.searchBar{ 
-
+#searchBar{ 
     height: 43px; 
-    width: 700px;;
+    width: 700px;
     padding: 7px;
     font-size: 12px;
     border-radius: 5px;

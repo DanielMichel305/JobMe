@@ -8,8 +8,8 @@ app.get('/', (req, res) => {
 });
 
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'static')));
+app.set('views', path.join(__dirname, 'views/pages'));
 app.set('view engine', 'ejs');
 
 
