@@ -1,0 +1,60 @@
+/* SearchBar */
+
+position: absolute;
+width: 823px;
+height: 100px;
+left: 50px;
+top: 508px;
+
+
+
+/* SearchBar */
+
+position: absolute;
+width: 823px;
+height: 100px;
+left: 50px;
+top: 508px;
+
+background: #D9D9D9;
+border-radius: 15px;
+
+
+/* Search Button */
+
+position: absolute;
+width: 198.81px;
+height: 84px;
+left: 667.44px;
+top: 515px;
+
+
+
+/* SearchButton */
+
+position: absolute;
+width: 198.81px;
+height: 84px;
+left: 667.44px;
+top: 515px;
+
+background: #000D30;
+border-radius: 15px;
+
+
+/* Find SERVICE! */
+
+position: absolute;
+width: 181px;
+height: 36px;
+left: 679px;
+top: 542px;
+
+font-family: 'Inter';
+font-style: italic;
+font-weight: 500;
+font-size: 26px;
+line-height: 31px;
+
+color: #FFFFFF;
+
