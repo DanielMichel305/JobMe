@@ -5,6 +5,7 @@
     padding:0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    color: #fff;
 }
 
 
@@ -18,7 +19,7 @@ header{
 
 }
 #topbar{
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     width: 80%;
     align-items: center;
@@ -31,7 +32,6 @@ header{
 }
 #topbar > *{
     margin: auto;
-
 }
 
 .searching-div{
@@ -72,19 +72,40 @@ header{
 
 
  
-.accountButton span{
-
+.custom-select {
+    position: relative;
+    display: inline-block;
+}
+ 
+.select-selected {
+    background-color: transparent;
     color: white;
-    font-size: x-large;
-    text-align: center;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.select-selected :hover{
+    color: #0056b3;
+}
+ 
+.select-items {
+    position: absolute;
+    display: none;
+    background-color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 2;
+    width:max-content;
+    border-radius: 12px;
 
 }
-
-
-.accountButton :hover{
-
-    color: #0056b3;
-
+ 
+.select-items div {
+    padding: 10px;
+    cursor: pointer;
+}
+ 
+.select-items div:hover {
+    background-color: #0056b3;
 }
 
 .messege span{
@@ -115,85 +136,56 @@ header{
 
 }
 
-.filtersList>*{
-
-    margin-left:12px;
-
-    
-}
 .filtersList{
-
-    position: relative;
+    position: sticky;
     width: 80%;
     align-items: center;
     display: flex;
-    left:9.6%;
+    left:10%;
     margin-top: 20px;
-
+    top: 0;
+    z-index: 1;
+    background-color: rgb(9, 2, 51);
+    height: 45px;
+    border-radius: 12px;
+    
+}
+.filtersList > *{
+    margin-left: 12px;
 }
 
-.CategoryList{
-
-    padding: 15px 15px; 
-    font-size: 16px;
-    background-color:#007bff; 
-    color: #000000; 
-    border: none; 
-    border-radius: 3px;
-    cursor: pointer; 
-    box-shadow: 0px 1px 5px 1px rgb(0, 0, 0);
-    border-radius: 9px;
-    transition: background-color 0.3s ease; 
-
+.filters-custome-select{
+    
+    position: relative;
+    display: inline-block;
 }
 
-.CategoryList:hover{
-
-    background-color:#0056b3; 
-
+.filters-select-selected{
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 12px;
 }
 
-.budgetList{
-
-    padding: 15px 15px; 
-    font-size: 16px;
-    background-color:#007bff; 
-    color: #000000; 
-    border: none; 
-    border-radius: 3px;
-    cursor: pointer; 
-    box-shadow: 0px 1px 5px 1px rgb(0, 0, 0);
-    border-radius: 9px;
-    transition: background-color 0.3s ease; 
-
+.filters-select-items{
+    position: absolute;
+    display: none;
+    background-color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 2;
+    width:max-content;
+    border-radius: 12px;
+}
+.filters-select-items div{
+    padding: 10px;
+    cursor: pointer;
+}
+.filters-select-items div:hover{
+    background-color: #0056b3;
 }
 
-.budgetList:hover{
-
-    background-color:#0056b3; 
-
-}
-
-.deliveryTimeList{
-
-    padding: 15px 15px; 
-    font-size: 16px;
-    background-color:#007bff; 
-    color: #000000; 
-    border: none; 
-    border-radius: 3px;
-    cursor: pointer; 
-    box-shadow: 0px 1px 5px 1px rgb(0, 0, 0);
-    border-radius: 9px;
-    transition: background-color 0.3s ease; 
-
-}
-
-.deliveryTimeList:hover{
-
-    background-color:#0056b3; 
-
-}
 .jobs-div{
 
     position: relative;
