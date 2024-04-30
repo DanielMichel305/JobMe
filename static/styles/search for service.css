@@ -34,6 +34,11 @@ header{
     margin: auto;
 }
 
+#topbar-logo-img{
+    position: relative;
+    top: 3px;
+}
+
 .searching-div{
     display: flex;
     align-items: center;
@@ -75,6 +80,8 @@ header{
 .custom-select {
     position: relative;
     display: inline-block;
+    bottom: 4px;
+    right: 4px;
 }
  
 .select-selected {
@@ -155,7 +162,6 @@ header{
 }
 
 .filters-custome-select{
-    
     position: relative;
     display: inline-block;
 }
@@ -177,6 +183,7 @@ header{
     z-index: 2;
     width:max-content;
     border-radius: 12px;
+    top: 42.5px;
 }
 .filters-select-items div{
     padding: 10px;
@@ -184,6 +191,13 @@ header{
 }
 .filters-select-items div:hover{
     background-color: #0056b3;
+}
+
+#sort-custom-select{
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .jobs-div{
