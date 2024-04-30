@@ -3,13 +3,73 @@
 body{
     background-color: #000D30;
     font-family: Inter;
+    
 }
+#infoSection-1{
+    position: relative;
+    color: #D9D9D9;
+    left: 5lvw;
+    top: 20lvh;
+    max-width: 45lvw;
+   
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 4lvw;
+    line-height: 8lvh;
+
+}
+#misc-text-1{
+    position: relative;
+    color: #D9D9D9;
+    left: 15lvw;    
+    top: 12lvh;
+}
+#infoSection-1 span{
+    color: #27cbff;
+    font-weight: 700;
+}
+
+#seller-provide-service{
+    position: relative;
+    top: 15lvh;
+    left: 70lvw;
+    background-color: transparent;
+    color: #D9D9D9;
+    outline: none;
+    border: solid;
+    border-radius: 10px;
+    border-color: #27cbff;
+    border-width: 0.5lvh;
+    padding: 2lvh;
+
+    height: 9.8lvh;
+    width: 20lvw;
+
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.9lvw;
+    line-height: 31px;
+    
+}
+
+#seller-provide-service:hover{
+
+    
+    
+    box-shadow: 0 0 10px #27cbff ;
+  
+
+}
+
 #searchBar-container{
-    position: absolute;
+    position: relative;
     width: 45lvw;
     height: 9.80lvh;
     left: 5lvw;  
-    top: 55lvh;
+    top: 6lvh;
     border-radius: 15px;
     background-color: #D9D9D9;
 }
@@ -60,5 +120,39 @@ body{
 #searchBar-button input:hover{
     color: #27cbff;
 
+}
+
+#stat-container{
+    position: relative;
+    top: 95 lvh;
+    top: calc( 9.80vh);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#stat-container div{
+   
+
+    color: #27cbff;
+    background-color: #D9D9D9;
+    padding: 5lvw;
+    margin: 2.1lvw;
+    border-radius: 15px;
+    max-width: 14lvw;
+    height: 10lvh;
+    box-shadow: 0 0 5px #27cbff;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.9lvw;
+    line-height: 31px;
+
+}
+#stat-container div span{
+    font-weight:1000 ;
 }
 

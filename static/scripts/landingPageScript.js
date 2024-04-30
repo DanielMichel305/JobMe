@@ -5,5 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("searchBar-search-sb").addEventListener("blur", function() {
         document.getElementById('searchBar-container').style.boxShadow= "none";
     });
+ 
 });
 
