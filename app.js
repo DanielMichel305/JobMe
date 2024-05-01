@@ -7,6 +7,10 @@ app.get('/', (req, res) => {
   res.render("servicesPage");
 });
 
+app.get("/service-view", (req, res) => {
+  res.render("serviceViewPage");
+});
+
 
 app.use(express.static(path.join(__dirname, 'static')));
 app.set('views', path.join(__dirname, 'views/pages'));

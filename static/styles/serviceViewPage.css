@@ -1,0 +1,66 @@
+main{
+    width: 100%;
+    height: 100%;
+}
+
+#middle-container{
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 100%;
+    left: 10%;
+    top: 20px;
+}
+
+#leftSide{
+    position: relative;
+    background-color: black;
+    width: 60%;
+    height: 100%;
+}
+
+#rightSide{
+    position: relative;
+    width: 40%;
+    padding: 10px;
+    margin-top: 20PX;
+   
+    
+}
+
+#purchaseBox{
+    margin: 10px;
+    width: 80%;
+    border: 2px solid black;
+}
+
+#priceTag h3{
+    margin: 15px;
+    color: black;
+    font-size: x-large;
+    position: relative;
+}
+
+#featuresList li{
+    color: black;
+    margin :15px;
+    font-style: italic;
+    font-size: larger;
+    position: relative;
+    left: 7%;
+}
+
+#rightSideButton{
+    
+    margin: 10px;
+
+}
+#rightSideButton input{
+    width: 60%;
+    background-color: rgb(29, 26, 26);
+    margin-left: 20%;
+    height: 50px;
+    font-size:xx-large;
+    
+
+}
