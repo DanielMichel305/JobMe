@@ -24,21 +24,62 @@ main{
     width: 40%;
     padding: 10px;
     margin-top: 20PX;
-   
-    
+}
+
+#rightSideText{
+    width: 100%;
 }
 
 #purchaseBox{
     margin: 10px;
-    width: 80%;
+    width: 100%;
     border: 2px solid black;
+    
+}
+
+#priceTag{
+    width: 50%;
+    margin: auto;
+    text-align: center;
 }
 
 #priceTag h3{
+    margin: 12px;
+    color: black;
+    font-size: xx-large;
+}
+
+#priceHr{
+    border: 0;
+    height: 2px;
+    margin:18px 0;
+    position:relative;
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%);
+}
+
+#descriptionText p{
     margin: 15px;
     color: black;
-    font-size: x-large;
+    font-size: larger;
     position: relative;
+    left: 7%;
+    
+}
+
+#serviceDetails{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 7%;
+}
+#serviceDetails p{
+    color:rgb(31, 30, 30);
+}
+#serviceDetails div{
+    display: flex;
+    position: relative;
+    left: 4%;
+    align-items: center;
 }
 
 #featuresList li{
