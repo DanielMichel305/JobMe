@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
 
+
+
 body{
     background-color: #000D30;
     font-family: Inter;
@@ -9,7 +11,7 @@ body{
     position: relative;
     color: #D9D9D9;
     left: 5lvw;
-    top: 20lvh;
+    top: 15lvh;
     max-width: 45lvw;
    
     
@@ -33,7 +35,7 @@ body{
 
 #seller-provide-service{
     position: relative;
-    top: 15lvh;
+    top: 18lvh;
     left: 70lvw;
     background-color: transparent;
     color: #D9D9D9;
@@ -56,11 +58,7 @@ body{
 }
 
 #seller-provide-service:hover{
-
-    
-    
     box-shadow: 0 0 10px #27cbff ;
-  
 
 }
 
@@ -69,7 +67,7 @@ body{
     width: 45lvw;
     height: 9.80lvh;
     left: 5lvw;  
-    top: 6lvh;
+    top: 8lvh;
     border-radius: 15px;
     background-color: #D9D9D9;
 }
@@ -137,11 +135,12 @@ body{
     color: #27cbff;
     background-color: #D9D9D9;
     padding: 5lvw;
-    margin: 2.1lvw;
+    margin: 3lvw;
     border-radius: 15px;
-    max-width: 14lvw;
-    height: 10lvh;
+    max-width: 25lvw;
+    height: 25lvh;
     box-shadow: 0 0 5px #27cbff;
+    
     justify-content: center;
     align-items: center;
 
@@ -150,9 +149,42 @@ body{
     font-weight: 700;
     font-size: 1.9lvw;
     line-height: 31px;
-
+    text-align: center;
+    
 }
 #stat-container div span{
     font-weight:1000 ;
 }
 
+#about-section-1{
+    margin-top: 15lvh;
+    
+    background-color: #D9D9D9;
+}
+#about-section-1 h2{
+    position: relative;
+    color: #000000;
+    margin-left: 5lvw;
+ 
+    top: 5lvh;
+   
+
+    font-family: 'Inter';
+    
+    font-weight: 700;
+    font-size: 3lvw;
+    line-height: 8lvh;
+    
+}
+
+#about-section-1-cards{
+    display: flex;
+    margin-left: 1lvw;
+    margin-top: 5lvh;
+}
+#about-section-1-cards div{
+    padding: 5lvw;
+    border-radius: 10px;
+    margin: 3lvw;
+    background-color: #FFFFFF;
+}
