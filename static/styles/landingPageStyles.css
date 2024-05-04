@@ -73,10 +73,9 @@ body{
 }
 
 #searchBar-search input{
-    /*position: static;*/
-    display: inline-block;
-    width: 29lvw;
-    height: 9.5lvh;
+    position: inherit;
+    width: 823px;
+    height: 50px;
     left: 50px;
     top: 508px;
 
@@ -88,15 +87,14 @@ body{
 }
 #searchBar-search input:focus{
     outline: none;
-    
+    box-shadow: 0 0 5px #27cbff;
 }
 #searchBar-button input{
-    /*position: static;*/
-    display: inline-block;
-    width: 14.6lvw;
-    height: 8lvh;
-    left: 120px;
-    top: 0px;
+    position: relative;
+    width: 198.81px;
+    height: 42px;
+    left: 5;
+    top: 5;
     /*left: 667.44px;
     top: 515px;*/
 
@@ -106,11 +104,9 @@ body{
     font-family: 'Inter';
     font-style: italic;
     font-weight: 500;
-    font-size: 1.9lvw;
+    font-size: 26px;
     line-height: 31px;
 
-
-    transform: translate(30lvw, -110%);
     color: #FFFFFF;
     border: none;
     outline: none;
