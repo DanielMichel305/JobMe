@@ -1,0 +1,317 @@
+main{
+    width: 100%;
+    height: 100%;
+}
+
+#middle-container{
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 100%;
+    left: 10%;
+    top: 20px;
+}
+
+#leftSide{
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+
+#sellerOverview{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#ProfileAvatar img{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 7px;
+  }
+
+ #profileNameText a ,i{
+ color: black;
+ }
+#topPathContainer{
+    display: flex;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+#topPath{
+    display: flex;
+    align-items: center;
+}
+#topPath p{
+    color: black;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+#topPath a{
+    color: black;
+    text-decoration: none;
+}
+
+#serviceOverview h1{
+    color: black;
+    margin-bottom: 2%;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+   
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    width: 100%; 
+    height: 500px; 
+    
+  }
+  .mySlides img{
+    height: 100%;
+   width: 100%;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+    
+  }
+  
+  .column img{
+    height: 50px;
+  }
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+
+#underSlidShowHr{
+    margin-top: 20px;
+    background-color: black;
+    height: 5px;
+}
+
+#aboutSellerBox{
+    margin-top: 10px;
+    width: 100%;
+    border: 2px solid black;
+    
+}
+
+
+#aboutSellerTitel h3{
+    color: black;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#aboutMeHr{
+    border: 0;
+    height: 2px;
+    margin:18px 0;
+    position:relative;
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%);
+}
+
+.info{
+    position: relative;
+    display: inline-block;
+    margin-left: 10%;
+    left: 10%;
+    align-items: center;
+
+}
+.info p,b{
+ 
+    color:black;
+}
+
+#aboutSellerHr{
+    background-color: black;
+    height: 2px;
+    margin-top: 5px;
+}
+
+#descriptionAboutSeller p{
+    color: black;
+    margin: 10px;
+}
+#rightSide{
+    position: relative;
+    width: 40%;
+    padding: 10px;
+    margin-top: 20PX;
+    
+}
+
+#rightSideText{
+    width: 100%;
+}
+
+#purchaseBox{
+    margin: 10px;
+    width: 100%;
+    border: 2px solid black;
+    
+}
+
+#priceTag{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#priceTag h3{
+    margin: 12px;
+    color: black;
+    font-size: xx-large;
+}
+
+#priceHr{
+    border: 0;
+    height: 2px;
+    margin:18px 0;
+    position:relative;
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%);
+}
+
+#descriptionText p{
+    margin: 15px;
+    color: black;
+    font-size: larger;
+    position: relative;
+    left: 7%;
+    
+}
+
+#serviceDetails{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 7%;
+}
+#serviceDetails p{
+    color:rgb(31, 30, 30);
+}
+#serviceDetails div{
+    display: flex;
+    position: relative;
+    left: 4%;
+    align-items: center;
+}
+
+#featuresList li{
+    color: black;
+    margin :15px;
+    font-style: italic;
+    font-size: larger;
+    position: relative;
+    left: 7%;
+}
+
+#rightSideButton{
+    
+    margin: 10px;
+
+}
+#rightSideButton input{
+    width: 60%;
+    background-color:  rgb(9, 2, 51);
+    margin-left: 20%;
+    height: 50px;
+    font-size:xx-large;
+    box-shadow: 0px 0px 12px 5px rgb(155, 208, 226);
+    cursor: pointer;
+
+}
+#rightSideButton input:hover{
+    background-color: rgb(24, 4, 135);
+}
+#contectBox{
+    margin: 10px;
+    width: 100%;
+    border: 2px solid black;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+#contectBox h3{
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+    font-size:x-large;
+}
+
+#contactHr{
+    border: 0;
+    height: 2px;
+    margin:8px 0;
+    position:relative;
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%);
+}
+
+#contectBox i{
+    color: black;
+    font-size:x-large;
+    margin: 3%;
+    
+}

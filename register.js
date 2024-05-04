@@ -81,6 +81,72 @@ function reg_validation(form) {
     //////
 
 
-   
+    if(password == "") {
+        displayerror("passwordErr", "Your password is missing");
+    } else {
+        var pattern = /^.{8,}$/;               
+        if(pattern.test(password) === false) {
+            displayerror("passwordErr", "Enter a valid password of atleast 8 charecters");
+        } else {
+            displayerror("passwordErr", "");
+            lastnameErr = false;
+        }
+    }
+
+    /////
+
+    if(confpassword == "") {
+        displayerror("confpasswordErr", "Your password is missing");
+    } else {
+                      
+        if(confpassword != password) {
+            displayerror("confpasswordErr", "Your password doesnt match the original one");
+        } else {
+            displayerror("confpasswordErr", "");
+            lastnameErr = false;
+        }
+    }
+
+
+    /////
+    if(mobile == "") {
+        displayerror("mobileErr", "Your mobile number is missing");
+    } else {
+        var pattern = /^[0]\d{10}$/;
+        if(pattern.test(mobile) === false) {
+            displayerror("mobileErr", "Enter a 11 digit mobile number,starting with 0");
+        } else{
+            displayerror("mobileErr", "");
+            mobileErr = false;
+        }
+    }
+
+
+////
+    if(gender == "") {
+        displayerror("genderErr", "Please select your gender");
+    } else {
+        displayerror("genderErr", "");
+        genderErr = false;
+    }
+
+    ////
+
+    if(category == "") {
+        displayerror("categoryErr", "Please select your category");
+    } else {
+        displayerror("categoryErr", "");
+        categoryErr = false;
+    }
+
+///////
+
+    if((nameErr || emailErr || mobileErr || categoryErr || genderErr || lastnameErr || confpasswordErr) == true) {
+        return false;
+    }
+    else{
+        return true;
+    }
+    
     
 }

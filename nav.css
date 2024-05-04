@@ -24,15 +24,37 @@ header {
     width: fit-content;
     height: fit-content;
 }
+#logo img{
+    width: 2.5lvw;
+}
 
 .navigation {
+    position: static;
     justify-content: space-around;
-    height: 40;
+    height: 10lvh;
+    top: 2lvh;
+    width: 100%;
+    background-color: rgb(9, 2, 51);
+    position: sticky;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    padding: 5px 50px;
+    justify-content: space-between;
+
+    background: rgba(0, 13, 48, 0.53);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);   
+    border: 1px solid #27cbff;
+    max-width: 100lvw;
 }
 
 
 
 .container {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,6 +112,11 @@ header {
     right: 100px;
     top: 30px;
 }
+#login a{
+    position: relative;
+    top: -2.5lvh;
+    
+}   
 
 nav {
     padding-right: 100px;
@@ -100,12 +127,16 @@ nav {
     color: rgb(10, 149, 184);
 }
 
-.fixed-navbar .search-bar {
+.search-bar {  
+    
+    position: absolute;
     display: flex;
     align-items: center;
     float: inline-start;
     flex-grow: 1;
     margin: 0 20px;
+    left: 55lvw;
+    
 }
 
 .search-bar input[type="text"] {
@@ -125,16 +156,23 @@ nav {
 }
 
 .fixed-navbar {
+    
     position: fixed;
-    top: 0;
+    top: 2lvh;
     width: 100%;
-    background-color: rgb(9, 2, 51);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+    
     padding: 5px 50px;
     z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.8px);
+    -webkit-backdrop-filter: blur(3.8px);  
+
 }
 body{
     background-image: url(Cover-Image.png);
