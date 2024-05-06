@@ -111,6 +111,9 @@ input:not(:placeholder-shown) ~ label {
     font-weight: 600;
     margin-bottom: 10px;
 }
+.btnlog a{
+    text-decoration: none;
+}
 .remember{
         margin: -15px 0 15px ;
         font-size: .9em;

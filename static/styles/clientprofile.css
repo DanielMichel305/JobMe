@@ -16,8 +16,8 @@ body {
 }
 
 .wrapper {
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: 5px;
     left: 0;
     width: 100%;
     height: auto;
