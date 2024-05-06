@@ -28,6 +28,7 @@ h3, a{
     width: fit-content;
     height: fit-content;
     font-family: 'Poppins', sans-serif;
+    font-size: 100%;
     margin: 0;
     padding: 0;
     top: 50lvh;
@@ -80,6 +81,7 @@ h3, a{
     padding: 5px 50px;
     z-index: 999;
     display: flex;
+    
     justify-content: space-between;
     align-items: center;
 
@@ -115,7 +117,7 @@ h3, a{
     border: none;
     border-radius: 4px;
     float: right;
-
+    
     margin: 0;
     padding: 0;
 }
@@ -160,14 +162,18 @@ h3, a{
 }
 
 #login {
-    position: fixed;
-    right: 100px;
-    top: 30px;
+    position: absolute;
+    left: 85%;
+    top: 35%;
+    display: flex;
+    flex-direction: row;
 }
 #login a{
     position: relative;
-    top: -1.5lvh;
-    margin-inline: 1lvw;
+   
+    margin-inline: 10%;
+    font-size: 120%;
+    
     
 }   
 
@@ -184,11 +190,14 @@ nav {
     
     position: absolute;
     display: flex;
+    flex-direction: row;
     align-items: center;
     float: inline-start;
     flex-grow: 1;
     margin: 0 20px;
-    left: 55lvw;
+    left :60%;
+    
+    
     
 }
 
@@ -196,6 +205,8 @@ nav {
     padding: 8px;
     border: none;
     border-radius: 4px;
+    width: 60%;
+    
 }
 
 .search-bar button {
@@ -205,7 +216,9 @@ nav {
     border-radius: 4px;
     color: white;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 5%;
+    width: 30%;
+
 }
 
 
