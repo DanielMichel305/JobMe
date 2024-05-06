@@ -26,7 +26,7 @@ body{
     position: relative;
     color: #D9D9D9;
     left: 15lvw;    
-    top: 12lvh;
+    top: 13lvh;
 }
 #infoSection-1 span{
     color: #27cbff;
@@ -65,7 +65,7 @@ body{
 #searchBar-container{
     position: relative;
     width: 45lvw;
-    height: 9.80lvh;
+    height: 10lvh;
     left: 5lvw;  
     top: 8lvh;
     border-radius: 15px;
@@ -74,15 +74,15 @@ body{
 
 #searchBar-search input{
     position: inherit;
-    width: 823px;
-    height: 50px;
+    width: 29lvw;
+    height: 9.8lvh;
     left: 50px;
     top: 508px;
 
-    font-size: 26px;
+    font-size: 1.5lvw;
     
     background: #D9D9D9;
-    border-radius: 15px;
+    border-radius: 15px 0 0 15px;
     border: none;
 }
 #searchBar-search input:focus{
@@ -91,20 +91,20 @@ body{
 }
 #searchBar-button input{
     position: relative;
-    width: 198.81px;
-    height: 42px;
-    left: 5;
-    top: 5;
+    width: 15.4lvw;
+    height: 9.5lvh;
+    left: 29.5lvw;
+    top: -9.5lvh;
     /*left: 667.44px;
     top: 515px;*/
 
     background: #000D30;
-    border-radius: 15px;
+    border-radius: 0 15px 15px 0;
 
     font-family: 'Inter';
     font-style: italic;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 2lvw;
     line-height: 31px;
 
     color: #FFFFFF;
@@ -161,16 +161,11 @@ body{
     position: relative;
     color: #000000;
     margin-left: 5lvw;
- 
     top: 5lvh;
-   
-
-    font-family: 'Inter';
-    
+    font-family: 'Inter';   
     font-weight: 700;
     font-size: 3lvw;
-    line-height: 8lvh;
-    
+    line-height: 8lvh;    
 }
 
 #about-section-1-cards{
