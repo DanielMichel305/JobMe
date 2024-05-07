@@ -53,9 +53,10 @@ header{
     padding: 7px;
     font-size: 12px;
     border-radius: 5px;
-
+    color: black;
 }
-.searchButton {
+
+#searchButton {
 
     padding: 7px 9px; 
     font-size: 16px;
@@ -68,7 +69,7 @@ header{
 
 }
 
-.searchButton:hover {
+#searchButton:hover {
 
     background-color: #0056b3; 
 
@@ -109,9 +110,12 @@ header{
     padding: 10px;
     cursor: pointer;
 }
- 
 .select-items div:hover {
     background-color: #0056b3;
+}
+
+.select-items a{
+    text-decoration: none;
 }
 
 .messege span{
