@@ -51,9 +51,11 @@ footer{
 #footer-social-section p{
     margin-top: 1.5%;
     font-size: large;
+    color: black;
 }
 #footer-social-section img{
     /* height: 10lvh;  */
     width: 5.5%; 
-     margin-left: 3lvw; 
+    margin-left: 3lvw; 
+
 }
