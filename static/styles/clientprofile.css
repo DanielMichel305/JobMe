@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: white;
+    height: auto;
+    
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.left {
+    width: 23%;
+    background-color: mediumblue;
+    padding: 30px 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    color: #fff;
+    min-height: 750px;
+}
+
+#img {
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+#img2{
+    margin-bottom: 0px;
+}
+
+.nav{
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.nav a {
+    border-bottom: 2px solid white ;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.nav a:hover{
+    transform: scale(1.190);
+}
+
+.right {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(3, 3, 43);
+    padding: 30px 50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 1px solid turquoise;
+    font-size: 42px;
+    font-weight: 900;
+    min-height: 750px;
+    letter-spacing: 5px;
+}
+
+.button {
+    text-align: right;
+    margin-top: 0px;
+    transform: translateY(30px);
+}
+
+.button button {
+    padding: 8px 40px;
+    background-color: turquoise;
+    color: white;
+    border: none;
+    border-radius: 120px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button button:hover {
+    background-color: mediumblue;
+    transform: scale(1.115);
+}
+
+.info {
+    margin-bottom: 25px;
+
+}
+
+#i {
+    margin-bottom: 60px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid turquoise;
+    font-size: 42px;
+    font-weight: 900;
+    color: turquoise;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.title {
+    font-size: 30px;
+    color: turquoise;
+    text-transform: uppercase;
+   
+}
+
+.info_data {
+    display: flex;
+    flex-direction: column;
+}
+
+.data {
+    width: 100%;
+    background-color: rgb(3, 3, 43);
+    margin-bottom: 40px;
+   
+}
+
+.details {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+
+.search-container {
+    text-align: right;
+    transform: translateY(35px);
+}
+
+#searchbar{
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#butsearch{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}   
+
+#butsearch:hover, .changepass:hover {
+    background-color: turquoise;
+    transform: scale(1.115);
+}
+
+
+ .product-info {
+    margin-top: 40px;
+} 
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 30px;
+}
+
+.prodname, .proddate, .prodprice {
+    flex: 1; 
+    border: 1px solid turquoise;
+    color: white;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: center;
+    padding: 12px;
+}
+
+.pname, .pdate, .pprice{
+    color: #fff;
+    max-width: 150px;
+    text-align: center;
+    font-size: 0.6em;
+}
+.pname{
+    padding-left: 70px; 
+}
+
+.box{
+    margin-top: 90px;
+}
+.labpass{
+    color: #fff;
+    font-weight: 400;
+    font-size: 46px;
+}
+
+.box-group{
+    margin-bottom: 60px;
+}
+
+.c_pass{
+    font-size: 32px;
+    border-radius: 10px;
+    border: 3px solid turquoise;
+    transform: translateY(-8px);
+}
+.changepass{
+    justify-content: center;
+    font-size: 27px;
+    padding: 10px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.ERROR {
+    color: red;
+    font-size: 0.55em;
+    margin-bottom: 20px;
+}
