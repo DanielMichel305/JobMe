@@ -40,6 +40,10 @@ body {
     margin-bottom: 50px;
 }
 
+#img2{
+    margin-bottom: 0px;
+}
+
 .nav{
     font-size: 1.2em;
     font-weight: 700;
@@ -64,7 +68,6 @@ body {
     background-color: rgb(3, 3, 43);
     padding: 30px 50px;
     border-top-right-radius: 5px;
-    background-color: rgb(3, 3, 43);
     border-bottom-right-radius: 5px;
     border-bottom: 1px solid turquoise;
     font-size: 42px;
