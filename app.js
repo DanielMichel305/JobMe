@@ -9,13 +9,14 @@ app.use(express.static(path.join(__dirname,'static')));
 app.set('views', path.join(__dirname, 'views/pages'));
 app.set('view engine', 'ejs');
 
+
 app.get('/', (req, res) => {
   res.render("index");
 });
 
 app.get("/services", (req, res) => {
   res.render("servicesPage");
-});
+
 
 app.get("/service-view", (req, res) => {
   res.render("serviceViewPage");
