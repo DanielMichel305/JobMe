@@ -1,4 +1,10 @@
 let topbar = document.getElementById("topbar");
+let searchBar = document.getElementById("searchBar");
+searchBar.addEventListener("keypress", function(event){
+    if(event.key === "Enter"){
+        document.getElementById("searchButton").click();
+    }
+});
 //searchbar auto resize
 function isOverflowing(el) { 
     let curOverf = el.style.overflow; 
@@ -16,7 +22,6 @@ function isOverflowing(el) {
 
 let body = document.body;
 body.onresize = function(){
-    let searchBar = document.getElementById("searchBar");
     if(isOverflowing(document.getElementById("topbar"))){
         let calcWidth = body.offsetWidth - 750;
         searchBar.style.width = calcWidth + "px";
