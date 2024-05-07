@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" href="styles/serviceViewPage.css">
+    </head>
+
+    <body>
+        <%- include("../partials/topbar.ejs")%>
+        <main>
+            <div id = "middle-container">
+                <div id = "leftSide">
+                    <div id = "topPathContainer">
+                        <div id = "topPath">
+                            
+                                <b><a class = "material-symbols-outlined" href = "/">
+                                    home
+                                </a></b>
+                                <b><P>/</P></b>
+                                <b><a href = "/services">category name</a></b>
+                                <b><p>/</p></b>
+                                <b><a>this service's name</a></b>
+                            
+                        </div>
+                    </div>
+                    <div id = "serviceOverview">
+                        <i><h1>
+                            I will design comapny logo for you
+                        </h1></i>
+                        <div id = "sellerOverview">
+                            <div id="ProfileAvatar">
+                                <a href = "/poster"><img src="../../images/profile-avatar/avatar.png" alt="Avatar" style="color: black;"></a>
+                            </div>
+                            <div id="profileNameText">
+                                <b><a href = "/poster">John Smith</a></b>
+                                <br>
+                                <b><a><i class="fa-solid fa-star"></i>Rating</a></b>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="mySlides">
+                            <img src="images/jobs/animation1.jpeg" style = "width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="images/jobs/animation2.jpeg" style="width:100%">
+                        </div>         
+                        <div class="mySlides">
+                            <img src="images/jobs/design1.jpeg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="images/jobs/design2.jpeg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="images/jobs/marketing1.jpeg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <img src="images/jobs/marketing2.jpeg" style="width:100%">
+                        </div>
+                      
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                      
+                        <div class="row">
+                          <div class="column">
+                            <img class="demo cursor" src="images/jobs/animation1.jpeg" style="width:100%" onclick="currentSlide(1)">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="images/jobs/animation2.jpeg" style="width:100%" onclick="currentSlide(2)">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="images/jobs/design1.jpeg" style="width:100%" onclick="currentSlide(3)">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="images/jobs/design2.jpeg" style="width:100%" onclick="currentSlide(4)">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="images/jobs/marketing1.jpeg" style="width:100%" onclick="currentSlide(5)">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="images/jobs/marketing2.jpeg" style="width:100%" onclick="currentSlide(6)">
+                          </div>
+                        </div>
+                      </div>
+
+                      <hr id="underSlidShowHr">
+
+                      <div id="aboutSellerBox">
+                        <div id="aboutSellerText">
+                            <div id="aboutSellerTitel">
+                                <h3>
+                                    About Me
+                                </h3>
+                            </div>
+                            <hr id = "aboutMeHr">
+                            <div id="informationsAboutSeller">
+                                <div class="info">
+                                    <P>From</P>
+                                    <b>egypt</b>
+                                </div>
+                                <div class="info">
+                                    <P>Member Since</P>
+                                    <b>jul,2018</b>
+                                </div>
+                                <div class="info">
+                                    <P>Languages</P>
+                                    <b>English,Arabic</b>
+                                </div>
+                            </div>
+                            <hr id="aboutSellerHr">
+                            <div id="descriptionAboutSeller">
+                                <p>Hi, Welcome to kaza!<br>
+
+                                    The journey of kaza started when I decided to become a freelance designer after acquiring years of experience in multiple companies. <br>Today I can happily say with all your support I become WE, a small group of creative designers. Our focus is to give you quality content. Hope we can make your life more creative in the coming days. Looking forward to working with your very soon!
+                                    
+                                  <br>  Thanks & Regards,</p>
+                            </div>
+                        </div>
+                      </div>
+                    
+                </div>
+                <div id="rightSide">
+                    <div id="stickyRight">
+                        <div id="purchaseBox">
+                            <div id="rightSideText">
+                                <div id = "priceTag">
+                                    <h3>
+                                        Price : 30$
+                                    </h3>
+                                </div>
+                                <hr id = "priceHr">
+                                <div id="descriptionText">
+                                    <b><p> Your Project Discription</p></b>
+                                </div>
+                                <div id="serviceDetails">
+                                    <p class="material-symbols-outlined">
+                                        hourglass_bottom
+                                    </p>
+                                    <b>
+                                        <p>
+                                            2-days delivery
+                                        </p>
+                                    </b>
+                                    <div>
+                                        <p class = "material-symbols-outlined">
+                                            laps
+                                        </p>
+                                        <b>
+                                            <p>
+                                                3-revisions
+                                            </p>
+                                        </b>
+                                    </div>
+                                </div>
+                                <div id = "featuresList">
+                                        <ul>
+                                            <li>2 concepts included</li>
+                                            <li>Logo transparency</li>
+                                            <li>Vector file</li>
+                                            <li>Printable file</li>
+                                            <li>Include 3D mockup</li>
+                                        </ul>
+                                </div>
+                            </div>
+                            <div id="rightSideButton">
+                                    <input type="button" value = "Buy">
+                            </div>
+                        </div>
+                     
+                        <div id="contectBox">
+                            <div id = "contectText">
+                                <h3>
+                                    Contact Me
+                                </h3>
+                            </div>
+                            <hr id = "contactHr">
+                            <a href="###"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="####"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="####"><i class="fa-brands fa-github"></i></a>
+                            <a href="####"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </main>
+        <%- include("../partials/footer.ejs")%>
+        <script src = "scripts/serviceViewPage.js"></script>
+    </body>
+</html>
