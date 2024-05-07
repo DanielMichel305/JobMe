@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="login.css">
-    <script src='register.js'>	</script>
+    <script src='../../static/scripts/register.js'>	</script>
     <title>JOB ME!</title>
 </head>
 
@@ -40,7 +40,49 @@
 
 
 
-      
+                    <div class="inputbox"  style="margin-bottom: 0px;">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="password"  name="password" >
+                        <label for="password">Password : </label>
+                    </div>
+                    <div class="error" id="passwordErr"></div>
+
+
+                    <div class="inputbox"   style="margin-bottom: 0px;">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="confpassword"  name="confpassword" >
+                        <label for="confpassword">Confirm Password : </label>
+                    </div>
+                    <div class="error" id="confpasswordErr"></div>
+
+
+                    <div class="inputbox"  style="margin-bottom: 0px;">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <input type="text" id="mobilenum" name="mobile" maxlength="11">
+                        <label for="mobilenum">Mobile Number : </label>
+                    </div>
+                    <div class="error" id="mobileErr"></div>
+
+
+
+                    <div class="radio-box"  style="margin-bottom: 0px;">
+                        <label for="gender">Gender : </label>
+                        <label><input type="radio" id="gender" name="gender" value="male"> Male</label>
+                        <label><input type="radio" id="gender" name="gender" value="female"> Female</label> 
+                    </div>
+                    <div class="error" id="genderErr"></div>
+
+                    
+                    <div class="radio-box"  style="margin-bottom: 0px;">
+                        <label for="category">Category : </label>
+                        <label><input type="radio" id="category" name="category" value="client"> Client</label>
+                        <label><input type="radio" id="category" name="category" value="freelancer"> Freelancer</label> 
+                    </div>
+                    <div class="error" id="categoryErr"></div>
+
+
+                    <button class="btnlog">Sign up </button>
+                    
                     
                     <div class="register">
                         <p>Already have an account? <a href="login.html">Log in </a></p>
@@ -56,10 +98,10 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <p class="foot">Copyright @jobME!</p>
 
-    </footer>
+    </footer> -->
 </body>
 
 </html>
