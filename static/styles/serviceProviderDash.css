@@ -1,0 +1,70 @@
+body{
+    overflow-x: hidden;
+    
+}
+.section-header{
+    position: relative;
+    font-size: x-large;
+    left:5%;    
+    
+}
+#dash-services, #dash-statistics{
+    display: flex;
+    justify-content: space-between;
+    border: solid #27cbff 2px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #27cbff;
+
+    /* From https://css.glass */
+    background: rgba(159, 186, 226, 0.15);
+    border-radius: 16px;
+
+    backdrop-filter: blur(5.3px);
+    margin-left: 5%;
+    margin-inline: 5%;
+    
+}
+.service-card{
+    padding: 3%;
+    background-color: antiquewhite;
+    margin: 5%;
+    width: 30%;
+    max-width:65%;
+    border-radius: 10px;
+    
+}
+.service-card h2, h4{
+    color: #27cbff;
+}
+.service-card h4{
+    position: relative;
+    left: 10%;
+    translate: 0 -25%;
+}
+#dash-statistics{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+#dash-statistics h2{
+    translate: -5% -5%;
+    color: #27cbff;
+}
+#dashboard-section-1 button{
+
+    color: #ffffff;
+    background-color: #27cbff;
+    border-radius: 10px;
+    padding: 1%;
+    font-weight: 800;
+    font-size: large;
+    
+    border: solid 3px palevioletred;
+    transition: 0.2s;
+    margin: 0.3%;
+}
+#dashboard-section-1 button:hover{
+    /* border: solid 4px palevioletred; */
+    box-shadow: 0 0 10px 7.5px pink;
+    scale: 1.03;
+}

@@ -11,12 +11,12 @@ app.set('view engine', 'ejs');
 
 
 app.get('/', (req, res) => {
-  res.render("index");
+  res.render("serviceproviderDash"); ///Change back to index
 });
 
 app.get("/services", (req, res) => {
   res.render("servicesPage");
-
+});
 
 app.get("/service-view", (req, res) => {
   res.render("serviceViewPage");
