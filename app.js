@@ -10,7 +10,7 @@ app.set('views', path.join(__dirname, 'views/pages'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render("index");
+  res.render("serviceproviderDash"); ///Change back to index
 });
 
 app.get("/services", (req, res) => {
@@ -40,7 +40,11 @@ app.get("/clienthistory", (req, res) => {
   res.render("clienthistory");
 });
 
+<<<<<<< HEAD
 app.get('/poster', (req, res) => {
+=======
+app.get("/poster", (req, res) => {
+>>>>>>> 3023bb9321d43c805426458e835b8aa152e778ac
   res.render("poster");
 });
 
