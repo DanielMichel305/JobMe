@@ -9,7 +9,6 @@ app.use(express.static(path.join(__dirname,'static')));
 app.set('views', path.join(__dirname, 'views/pages'));
 app.set('view engine', 'ejs');
 
-
 app.get('/', (req, res) => {
   res.render("serviceproviderDash"); ///Change back to index
 });
@@ -39,6 +38,10 @@ app.get("/clientpass", (req, res) => {
 });
 app.get("/clienthistory", (req, res) => {
   res.render("clienthistory");
+});
+
+app.get("/poster", (req, res) => {
+  res.render("poster");
 });
 
 
