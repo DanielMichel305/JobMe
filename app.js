@@ -40,7 +40,11 @@ app.get("/clienthistory", (req, res) => {
   res.render("clienthistory");
 });
 
+<<<<<<< HEAD
+app.get('/poster', (req, res) => {
+=======
 app.get("/poster", (req, res) => {
+>>>>>>> 3023bb9321d43c805426458e835b8aa152e778ac
   res.render("poster");
 });
 

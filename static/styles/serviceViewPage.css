@@ -51,15 +51,23 @@ main{
     display: flex;
     margin-top: 1%;
     margin-bottom: 5%;
+    
 }
 #topPath{
     display: flex;
     align-items: center;
+    
+    
 }
 #topPath p{
     color: black;
     margin-right: 6px;
+<<<<<<< HEAD
+    margin-left: 6px;
+    
+=======
     margin-left: 7px;
+>>>>>>> 3023bb9321d43c805426458e835b8aa152e778ac
 }
 
 
@@ -207,11 +215,21 @@ main{
     width: 40%;
     padding: 10px;
     margin-top: 20PX;
+<<<<<<< HEAD
+   
+    
+    
+=======
+>>>>>>> 3023bb9321d43c805426458e835b8aa152e778ac
 }
 
 #stickyRight{
     top:30px;
     position: sticky;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 3023bb9321d43c805426458e835b8aa152e778ac
 }
 #rightSideText{
     width: 100%;
