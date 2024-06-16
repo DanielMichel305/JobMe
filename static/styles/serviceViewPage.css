@@ -34,20 +34,27 @@ main{
  #profileNameText a ,i{
  color: black;
  }
+
 #topPathContainer{
     display: flex;
     margin-top: 1%;
     margin-bottom: 5%;
+    
 }
 #topPath{
     display: flex;
     align-items: center;
+    
+    
 }
 #topPath p{
     color: black;
     margin-right: 6px;
     margin-left: 6px;
+    
 }
+
+
 #topPath a{
     color: black;
     text-decoration: none;
@@ -190,9 +197,16 @@ main{
     width: 40%;
     padding: 10px;
     margin-top: 20PX;
+   
+    
     
 }
 
+#stickyRight{
+    top:30px;
+    position: sticky;
+
+}
 #rightSideText{
     width: 100%;
 }
@@ -201,6 +215,7 @@ main{
     margin: 10px;
     width: 100%;
     border: 2px solid black;
+    
     
 }
 
