@@ -4,7 +4,7 @@ const session = require('express-session')
 const passport = require('passport');
 const mongoose = require('mongoose');
 const path = require("path");
-const bcrypt = require("bcrypt");
+
 const app = express();
 const port = 5000;
 const bodyParser = require('body-parser')
@@ -66,7 +66,7 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
-app.post('/register', (req,res) => {
+/* app.post('/register', (req,res) => {
 
   var User = require('./Model/UserModel');
   bcrypt.genSalt(10,(err,salt) => {
@@ -85,7 +85,7 @@ app.post('/register', (req,res) => {
     });
   });
 
-});
+}); */
 
 
 app.get("/clientprofile", (req, res) => {
