@@ -25,11 +25,6 @@ router.get('/google/callback',
 
 router.post('/signup', async (req,res)=>{
     var User = require('../Model/UserModel');
-
-
-    req.body.category == "client" ? req.body.category = false : req.body.category = true;
-    req.body.gender == "male" ?  req.body.gender = false :  req.body.gender = true;
-
     try{
     req.body.password = bcrypt.hashSync(req.body.password, 10);
     }
@@ -37,6 +32,8 @@ router.post('/signup', async (req,res)=>{
         res.json({error: "Error Creating account ",error_description: "Failiure to secure password", error_detail: err});
     }
     
+    req.body.category == "client" ? req.body.category = false : req.body.category = true;
+    req.body.gender == "male" ?  req.body.gender = false :  req.body.gender = true;
     try{
     await User.create({email: req.body.email, firstName: req.body.name, lastName: req.body.lastname, auth_Method: true, password: req.body.password, activated: false, phoneNumber: req.body.mobile});    
     }
