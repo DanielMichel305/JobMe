@@ -74,7 +74,9 @@ app.post('/register', (req,res) => {
        if(err) throw (err);
 
        //console.log(hash);
-       var user = new User({email: req.body.email, firstName: req.body.name, lastName: req.body.lastname, auth_Method: true, password: hash, activated: false});
+       var user = new User({email: req.body.email, firstName: req.body.name, lastName: req.body.lastname, auth_Method: true, password: hash, activated: false, phoneNumber: req.body.mobile});
+       req.body.category == "client" ? user.category = false : user.category = true;
+       req.body.gender == "male" ? user.gender = false : user.gender = true;
        console.log(user);
        user.save().then(item =>{
          res.send("Information saved to database");
