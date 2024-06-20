@@ -1,8 +1,11 @@
 require('dotenv').config();
 const passport = require('passport');
+const crypto = require('crypto');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const bcrypt = require('bcrypt');
 
 const User = require('../Model/UserModel');
+const UserAuth = require('../Model/UserAuthModel');
 
 function isLoggedIn(req, res, next) {
     req.user ? next() : res.sendStatus(401);
@@ -41,4 +44,45 @@ passport.serializeUser(function(user, done) {
 passport.deserializeUser(function(user, done) {
     done(null, user);
 });
-module.exports = [passport, isLoggedIn];
+
+const UserController = {
+
+    async generateActivationToken(reqEmail){
+      const activationToken = crypto.randomBytes(10).toString('hex');
+      try{
+        await UserAuth.create({email: reqEmail, Activation_TOKEN: activationToken});
+      }
+      catch(err){
+        return false
+      }
+    },
+
+    async signUp(req,res){
+           await this.generateActivationToken(req.body.email);
+
+
+      req.body.category == "client" ? req.body.category = false : req.body.category = true;
+      req.body.gender == "male" ?  req.body.gender = false :  req.body.gender = true;
+  
+      try{
+      req.body.password = bcrypt.hashSync(req.body.password, 10);
+      }
+      catch(err){
+          if(err)res.json({error: "Error Creating account ",error_description: "Failiure to secure password", error_detail: err});
+      }
+      
+      try{
+      await User.create({email: req.body.email, firstName: req.body.name, lastName: req.body.lastname, auth_Method: true, password: req.body.password, activated: false, phoneNumber: req.body.mobile});    
+      }
+      catch(err){
+          if(err) res.json({error: "Error Creating account",error_description: "Failiure to add user", error_detail: err});
+      }
+
+      
+
+      res.json({message: "Account Creation Success!"});
+  }
+
+}
+
+module.exports = {passport, isLoggedIn, UserController};
