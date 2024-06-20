@@ -21,7 +21,7 @@ const UserAuth = new mongoose.Schema({
 
 });
 
-UserAuth.index({ createdAt: 1 }, { expireAfterSeconds: 30 });
+UserAuth.index({ createdAt: 1 }, { expireAfterSeconds: 900 });
 
 
 // Create the model

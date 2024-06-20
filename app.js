@@ -20,11 +20,11 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 
-
+/* 
 const privateKey = fs.readFileSync('./certs/key.pem', 'utf8');
-const certificate = fs.readFileSync('./certs/cert.pem', 'utf8');
+const certificate = fs.readFileSync('./certs/cert.pem', 'utf8'); */
 
-const credentials = { key: privateKey, cert: certificate };
+//const credentials = { key: privateKey, cert: certificate };
 
 
 const authRouter = require('./Routes/authRoutes');
@@ -97,10 +97,10 @@ app.get('/protected',isLoggedIn ,(req,res)=>{
 
 })
 
-const httpsServer = https.createServer(credentials, app);
+/* const httpsServer = https.createServer(credentials, app);
 httpsServer.listen(443, () => {
   console.log('HTTPS Server running on port 443');
-});
+}); */
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

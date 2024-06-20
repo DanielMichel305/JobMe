@@ -3,9 +3,24 @@ const passport = require('passport');
 const crypto = require('crypto');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const bcrypt = require('bcrypt');
+const nodemailer = require('nodemailer');
 
 const User = require('../Model/UserModel');
 const UserAuth = require('../Model/UserAuthModel');
+
+
+const NodeEmail = process.env.verification_Email;
+const NodePass = process.env.email_passkey;
+
+const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
+  auth: {
+    user: NodeEmail,
+    pass: NodePass  
+  }
+});
 
 function isLoggedIn(req, res, next) {
     req.user ? next() : res.sendStatus(401);
@@ -48,19 +63,45 @@ passport.deserializeUser(function(user, done) {
 const UserController = {
 
     async generateActivationToken(reqEmail){
+      const result =  {
+        success: true,
+        token: ""
+      }
       const activationToken = crypto.randomBytes(10).toString('hex');
+      result.token =activationToken;
       try{
         await UserAuth.create({email: reqEmail, Activation_TOKEN: activationToken});
       }
       catch(err){
-        return false;
+        result.success = false
+        result.token="";
       }
-      return true;
+      return result;
     },
 
+    async sendActivationMail(email,token){
+
+      const mailOptions = {
+        from: process.env.email,
+        to: email,
+        subject: 'Account Verification',
+        text: `Click the following link to verify your account: http://localhost:8080/activateAccount/${token}`
+      };
+
+      try {
+        transporter.sendMail(mailOptions);
+        console.error('Verification email sent');
+        //res.send('Verification email sent');
+      } catch (error) {
+        console.error('Error sending verification email:', error);
+        ////Send ERROr
+      }
+      
+
+    },
     async signUp(req,res){
       
-      await this.generateActivationToken(req.body.email);
+      const token = await this.generateActivationToken(req.body.email);
       req.body.category == "client" ? req.body.category = false : req.body.category = true;
       req.body.gender == "male" ?  req.body.gender = false :  req.body.gender = true;
   
@@ -80,7 +121,7 @@ const UserController = {
           return
       }
 
-      
+      this.sendActivationMail(req.body.email, token.token);
 
       res.json({message: "Account Creation Success!"});
   }
