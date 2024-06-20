@@ -67,6 +67,7 @@ app.get("/clienthistory", (req, res) => {
 
 app.get("/poster", (req, res) => {
 
+
   res.render("poster");
 });
 
