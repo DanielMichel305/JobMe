@@ -53,14 +53,14 @@ const UserController = {
         await UserAuth.create({email: reqEmail, Activation_TOKEN: activationToken});
       }
       catch(err){
-        return false
+        return false;
       }
+      return true;
     },
 
     async signUp(req,res){
-           await this.generateActivationToken(req.body.email);
-
-
+      
+      await this.generateActivationToken(req.body.email);
       req.body.category == "client" ? req.body.category = false : req.body.category = true;
       req.body.gender == "male" ?  req.body.gender = false :  req.body.gender = true;
   
@@ -69,6 +69,7 @@ const UserController = {
       }
       catch(err){
           if(err)res.json({error: "Error Creating account ",error_description: "Failiure to secure password", error_detail: err});
+          return
       }
       
       try{
@@ -76,6 +77,7 @@ const UserController = {
       }
       catch(err){
           if(err) res.json({error: "Error Creating account",error_description: "Failiure to add user", error_detail: err});
+          return
       }
 
       
