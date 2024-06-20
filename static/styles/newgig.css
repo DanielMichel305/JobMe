@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+.container {
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 1%;
+}
+.section {
+    margin-bottom: 20px;
+}
+.section input, .section select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.section-title {
+    font-weight: bold;
+    color: rgb(15, 15, 140);
+}
+.button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+.cancel-button {
+    background-color: #ccc;
+    color: black;
+}
+.save-button {
+    background-color: rgb(15, 15, 140);
+    color: white;
+}
+.error {
+    border-color: red;
+}

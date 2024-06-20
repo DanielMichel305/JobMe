@@ -5,6 +5,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const path = require("path");
 const bcrypt = require("bcrypt");
+
 const app = express();
 const port = 5000;
 const bodyParser = require('body-parser')
@@ -66,7 +67,7 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
-app.post('/register', (req,res) => {
+ /*app.post('/register', (req,res) => {
 
   var User = require('./Model/UserModel');
   bcrypt.genSalt(10,(err,salt) => {
@@ -74,9 +75,7 @@ app.post('/register', (req,res) => {
        if(err) throw (err);
 
        //console.log(hash);
-       var user = new User({email: req.body.email, firstName: req.body.name, lastName: req.body.lastname, auth_Method: true, password: hash, activated: false, phoneNumber: req.body.mobile});
-       req.body.category == "client" ? user.category = false : user.category = true;
-       req.body.gender == "male" ? user.gender = false : user.gender = true;
+       var user = new User({email: req.body.email, firstName: req.body.name, lastName: req.body.lastname, auth_Method: true, password: hash, activated: false});
        console.log(user);
        user.save().then(item =>{
          res.send("Information saved to database");
@@ -87,7 +86,7 @@ app.post('/register', (req,res) => {
     });
   });
 
-});
+}); */
 
 
 app.get("/clientprofile", (req, res) => {
