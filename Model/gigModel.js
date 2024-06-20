@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const Order = require('./orderModel').orderSchema;
+const Order = require('./orderModel');
+const User = require('./UserModel');
 
 const gigSchema = new mongoose.Schema({
     gigID: {
@@ -27,7 +28,7 @@ const gigSchema = new mongoose.Schema({
         required: true
     },
     freelancer: {
-        type: mongoose.Schema.ObjectID,
+        type: mongoose.Schema.Types.ObjectID,
         ref: 'Users',
         required: true
     },
