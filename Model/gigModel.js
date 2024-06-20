@@ -25,8 +25,16 @@ const gigSchema = new mongoose.Schema({
     date_posted: {
         type: String,
         required: true
-    }/* ,
-    orders: [Order] */
+    },
+    freelancer: {
+        type: mongoose.Schema.ObjectID,
+        ref: 'Users',
+        required: true
+    },
+    orders: [{
+        type: mongoose.Schema.Types.ObjectID,
+        ref: 'Orders',
+    }]
 }, {
     versionKey: false,
     strict: true

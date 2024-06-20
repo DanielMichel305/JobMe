@@ -50,9 +50,9 @@ const UserSchema = new mongoose.Schema({
     activated: {
         type: Boolean,
         default: false
-    }/* ,
-    orders: [Order],
-    gigs: [Gig] */
+    },
+    orders: [{type: mongoose.Schema.Order, ref: 'Orders'}],
+    gigs: [{type: mongoose.Schema.Gig, ref: 'Gigs'}]
 },{
     versionKey: false,
     strict: true
