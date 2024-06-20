@@ -90,7 +90,7 @@ app.get("/register", (req, res) => {
 
 
 app.get("/clientprofile", (req, res) => {
-  res.render("clientprofile");
+  res.render("clientprofile", req.session.user);
 });
 app.get("/clientpass", (req, res) => {
   res.render("clientpass");
