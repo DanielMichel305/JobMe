@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const Order = require('./orderModel').orderSchema;
-const Gig = require('./gigModel').gigSchema;
+const Order = require('./orderModel');
+const Gig = require('./gigModel');
 
 const UserSchema = new mongoose.Schema({
 
@@ -50,9 +50,13 @@ const UserSchema = new mongoose.Schema({
     activated: {
         type: Boolean,
         default: false
-    }/* ,
-    orders: [Order],
-    gigs: [Gig] */
+    },
+    createdAt: { 
+        type: Date,
+         default: Date.now 
+    },
+    orders: [{type: mongoose.Schema.Types.ObjectID, ref: 'Orders'}],
+    gigs: [{type: mongoose.Schema.Types.ObjectID, ref: 'Gigs'}]
 },{
     versionKey: false,
     strict: true
