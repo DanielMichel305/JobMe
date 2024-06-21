@@ -1,4 +1,5 @@
 
+
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -10,6 +11,17 @@ body {
 .section {
     margin-bottom: 20px;
     
+
+
+.container {
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 1%;
+}
+
 }
 .section input, .section select {
     width: 100%;
@@ -17,7 +29,9 @@ body {
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+
     color: black;
+
 }
 .section-title {
     font-weight: bold;
@@ -29,7 +43,9 @@ body {
     cursor: pointer;
     border-radius: 5px;
     border: none;
+
     width: 100%;
+
 }
 .cancel-button {
     background-color: #ccc;
@@ -41,6 +57,7 @@ body {
 }
 .error {
     border-color: red;
+
 }
 
 option{
@@ -123,3 +140,6 @@ option{
   }
 
   
+
+
+

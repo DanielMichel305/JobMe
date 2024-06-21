@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="styles/newgig.css">
     
 </head>
 <body>
-    <div id="newgig-wrapper">
-
-        <div id="newgig-toggle">
-
-			<i class='bx bxs-book-add'></i>
-
-		</div>
-
-        <div class="container">
+    <%- include("../partials/topbar") %>
+    <div class="container">
         <h1 class="section-title centered">Create a New Gig</h1>
-        <form name ="gigForm" action="/auth/newGig" method="post">
+        <form id="gigForm">
         <div class="section">
             <div class="section-title">Gig TITLE</div>
-            <input type="text" placeholder="I will design a full elementor wordpress" name = 'title'>
-        </div>
+            <input type="text" placeholder="I will design a full elementor wordpress">
 
-        <div id="add-photos-button"  >
-            <div class="section-title" >insert images</div>
-            <input type="file" multiple = "yes" accept="image/*" id="photos-button" name = 'files'>
         </div>
         <div class="section">
             <div class="section-title" >CATEGORY</div>
@@ -50,7 +40,9 @@
         </div>
         <div class="section">
             <div class="section-title">GIG METADATA</div>
+
             <select id="meta-data-text">
+
                 <option value="">Select meta data</option>
                 <option>Education</option>
                 <option>Entertainment</option>
@@ -64,6 +56,7 @@
         </div>
         <div class="section">
             <div class="section-title">PRICE</div>
+
             <input type="text" placeholder="Price" name = 'price' imgs: fs.readFileSync>
         </div>
         
@@ -72,6 +65,9 @@
         </form>
     </div>
 </div>
+
+
+    <%- include("../partials/footer")%>
 
     <script src="scripts/newgig.js"></script>
 </body>

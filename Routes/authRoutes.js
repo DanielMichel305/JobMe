@@ -54,7 +54,9 @@ router.post('/signup', async (req,res)=>{
 
 router.get('/activate/:token', (req,res)=>{
     
+
     UserController.activateUser(req,res);
+
 
 });
 

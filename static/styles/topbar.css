@@ -153,7 +153,11 @@ header{
 
 
   
- /* @media (max-width: 600px) {
+
+/*
+
+  @media (max-width: 600px) {
+
     #topbar {
       width: calc(100% -  env(safe-area-inset-left));
       left: env(safe-area-inset-right);
@@ -190,4 +194,8 @@ header{
     #searchBar {
       width: calc(100% -  env(safe-area-inset-left) - env(safe-area-inset-right));
     }
+
   }*/
+
+  
+
