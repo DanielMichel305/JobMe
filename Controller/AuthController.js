@@ -4,6 +4,14 @@ const crypto = require('crypto');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
+const util = require('util');
+const path = require('path');
+const ejs = require("ejs");
+
+const fs = require('fs');
+const readFile = util.promisify(fs.readFile);
+
+
 
 const User = require('../Model/UserModel');
 const UserAuth = require('../Model/UserAuthModel');
@@ -65,27 +73,36 @@ const UserController = {
     async generateActivationToken(reqEmail){
       const result =  {
         success: true,
-        token: ""
+        Activationtoken: ""
       }
-      const activationToken = crypto.randomBytes(10).toString('hex');
-      result.token =activationToken;
+      const activationToken =   crypto.randomBytes(10).toString('hex');
+      console.log(`\n----------ACTIVATION TOKEN ${activationToken}\n-------------\n`);
+      result.Activationtoken =activationToken;
       try{
         await UserAuth.create({email: reqEmail, Activation_TOKEN: activationToken});
       }
       catch(err){
         result.success = false
-        result.token="";
+        result.token="";  
       }
       return result;
     },
 
     async sendActivationMail(email,token){
 
+      let emailContent = await readFile(path.join(__dirname,'../views/email_templates/verification.ejs'), 'utf8');
+      console.log(`ACTIVATION TOKEN ${token}\n`);
+      const activationLink = { 
+        ActivationLink : `http://localhost:5000/auth/activate/${token}`
+      };
+      emailContent = ejs.render(emailContent, activationLink);
+      console.log(emailContent);
+
       const mailOptions = {
-        from: process.env.email,
+        from: process.env.verification_Email,
         to: email,
         subject: 'Account Verification',
-        text: `Click the following link to verify your account: http://localhost:8080/activateAccount/${token}`
+        html: emailContent       ////////////////////////////Load using fs from ../views/email_templates/verification.html
       };
 
       try {
@@ -99,7 +116,27 @@ const UserController = {
       
 
     },
+
     async signUp(req,res){
+
+      const response = {
+        message : ""
+      }
+      try{
+        if(!await User.findOne({email : req.body.email})){
+          //User Already exists
+          response.message = "Email associated with another account, Try to sign in.";
+          res.json(400)(response);
+          return;
+        }
+      }
+      catch(err){
+        response.message="Couldn't Signup, Server ERROR";
+        res.json(500)({response});
+        return;
+
+      }
+      
       
       const token = await this.generateActivationToken(req.body.email);
       req.body.category == "client" ? req.body.category = false : req.body.category = true;
@@ -121,9 +158,22 @@ const UserController = {
           return
       }
 
-      this.sendActivationMail(req.body.email, token.token);
+      this.sendActivationMail(req.body.email, token.Activationtoken);
 
       res.json({message: "Account Creation Success!"});
+  },
+
+  async activateUser(req,res){
+    const {token} = req.params;
+    try{
+      const userEmail = await UserAuth.findOne({Activation_TOKEN : token }, 'email');
+      await UserAuth.deleteOne({Activation_TOKEN: token, email : userEmail.email});
+      await User.findOneAndUpdate({email : userEmail.email}, {activated: true});
+    }
+    catch(err){
+      console.log(err);
+    }
+    res.send("Account aactivated!");
   }
 
 }

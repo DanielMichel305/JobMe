@@ -2,7 +2,8 @@ require('dotenv').config();
 const router = require('express').Router();
 const passport = require('passport');
 const bcrypt = require("bcrypt");
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const { UserController } = require('../Controller/AuthController');
 
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
@@ -29,6 +30,11 @@ router.post('/signup', async (req,res)=>{
     const UserController = require('../Controller/AuthController').UserController;
     await UserController.signUp(req,res);
 
+});
+
+router.get('/activate/:token', (req,res)=>{
+    
+    UserController.activateUser(req,res);
 });
 
 router.get('/logout', (req, res,next) => {
