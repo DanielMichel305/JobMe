@@ -3,6 +3,7 @@ const router = require('express').Router();
 const passport = require('passport');
 const bcrypt = require("bcrypt");
 const bodyParser = require('body-parser');
+
 const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
@@ -19,6 +20,9 @@ var storage = multer.diskStorage({
 var upload = multer({storage: storage});
 */
 const { default: mongoose } = require('mongoose');
+
+const { UserController } = require('../Controller/AuthController');
+
 
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
@@ -40,47 +44,18 @@ router.get('/google/callback',
 
 
 router.post('/signup', async (req,res)=>{
-    let User = require('../Model/UserModel');
-    try{
-    req.body.password = bcrypt.hashSync(req.body.password, 10);
-    }
-    catch(err){
-        res.json({error: "Error Creating account ",error_description: "Failiure to secure password", error_detail: err});
-    }
+
     
-    req.body.category == "client" ? req.body.category = false : req.body.category = true;
-    req.body.gender == "male" ?  req.body.gender = false :  req.body.gender = true;
-    try{
-    await User.create({email: req.body.email, firstName: req.body.name, lastName: req.body.lastname, auth_Method: true, password: req.body.password, activated: false, phoneNumber: req.body.mobile, gender: req.body.gender});    
-    }
-    catch(err){
-        res.json({error: "Error Creating account",error_description: "Failiure to add user", error_detail: err});
-    }
-    res.json({message: "Account Creation Success!"});
-     
+    
+    const UserController = require('../Controller/AuthController').UserController;
+    await UserController.signUp(req,res);
+
 });
 
-router.post('/signin', async (req, res) => {
-    let UserModel = require('../Model/UserModel');
-    user = await UserModel.findOne({email: req.body.email});
-    if(user){
-        //console.log(user);
-        bcrypt.compare(req.body.password, user.password, (err, result) => {
-            //console.log(result);
-            if(result == true){
-                req.session.user = user;
-                req.session.user.category ?  res.redirect('/') : res.redirect('/services')
-            }
-            else{
-                req.session.user = undefined;
-                res.redirect('/login');
-            }
-        });
-    }
-    else{
-        req.session.user = undefined;
-        res.redirect('/login');
-    }
+router.get('/activate/:token', (req,res)=>{
+    
+    UserController.activateUser(req,res);
+
 });
 
 router.get('/logout', (req, res,next) => {
@@ -95,6 +70,7 @@ router.get('/logout', (req, res,next) => {
     
    
 });
+
 
 /*
 router.post('/newGig', upload.('image'), async (req, res) => {
@@ -116,6 +92,7 @@ router.post('/newGig', upload.('image'), async (req, res) => {
 
 });
 */
+
 
 module.exports = router;
 
