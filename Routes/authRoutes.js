@@ -60,6 +60,29 @@ router.get('/activate/:token', (req,res)=>{
 
 });
 
+router.post('/signin', async (req, res) => {
+    let UserModel = require('../Model/UserModel');
+    user = await UserModel.findOne({email: req.body.email});
+    if(user){
+        //console.log(user);
+        bcrypt.compare(req.body.password, user.password, (err, result) => {
+            //console.log(result);
+            if(result == true){
+                req.session.user = user;
+                req.session.user.category ?  res.redirect('/') : res.redirect('/services')
+            }
+            else{
+                req.session.user = undefined;
+                res.redirect('/login');
+            }
+        });
+    }
+    else{
+        req.session.user = undefined;
+        res.redirect('/login');
+    }
+});
+
 router.get('/logout', (req, res,next) => {
     
    
