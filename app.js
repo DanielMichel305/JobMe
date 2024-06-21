@@ -4,33 +4,19 @@ const session = require('express-session')
 const passport = require('passport');
 const mongoose = require('mongoose');
 const path = require("path");
-
-
 const bcrypt = require("bcrypt");
-
-const http = require('http');
-const https = require('https');
-const fs = require('fs');
-
-
-require('./Model/dbScript');    ///Cron Job for confirming Hard Deletion into Hard Deletion
-
 
 const app = express();
 const port = 5000;
 const bodyParser = require('body-parser')
 
-
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
 
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
-
-
-/* 
-const privateKey = fs.readFileSync('./certs/key.pem', 'utf8');
-const certificate = fs.readFileSync('./certs/cert.pem', 'utf8'); */
-
-//const credentials = { key: privateKey, cert: certificate };
 
 
 
@@ -81,7 +67,7 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
-/* app.post('/register', (req,res) => {
+ /*app.post('/register', (req,res) => {
 
   var User = require('./Model/UserModel');
   bcrypt.genSalt(10,(err,salt) => {
@@ -125,13 +111,6 @@ app.get('/protected',isLoggedIn ,(req,res)=>{
   res.send("Protected Page");
 
 })
-
-
-/* const httpsServer = https.createServer(credentials, app);
-httpsServer.listen(443, () => {
-  console.log('HTTPS Server running on port 443');
-}); */
-
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

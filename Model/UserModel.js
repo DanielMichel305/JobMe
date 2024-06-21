@@ -51,12 +51,6 @@ const UserSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-
-    createdAt: { 
-        type: Date,
-         default: Date.now 
-    },
-
     orders: [{type: mongoose.Schema.Types.ObjectID, ref: 'Orders'}],
     gigs: [{type: mongoose.Schema.Types.ObjectID, ref: 'Gigs'}]
 },{

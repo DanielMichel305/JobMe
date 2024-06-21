@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.querySelector('form[name="gigForm"]');
 
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
 
 function updateServiceOptions() {
     var categorySelect = document.getElementById("categorySelect");
@@ -86,7 +84,6 @@ function validateForm() {
             input.removeAttribute('placeholder');
         }
     });
-
 }
 
 const newGigToggle = document.querySelector('#newgig-toggle');
@@ -98,6 +95,4 @@ newGigToggle.addEventListener('click', function(){
 
 });
 
-
-}
 
