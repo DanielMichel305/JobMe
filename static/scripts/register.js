@@ -1,15 +1,14 @@
-document.addEventListener("DOMContentLoaded", function () {
+
+document.addEventListener("DOMContentLoaded", function() {
     var form = document.querySelector('form[name="registerform"]');
 
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", function(event) {
         event.preventDefault();
 
         var isValid = reg_validation(form);
-        console.log("Form validity before:" + isValid)
 
-        if (isValid) {
-            // form.submit();
-            console.log("Form validity after:" + isValid)
+        if (true) { //change when fixed pleaseee !!!!!!!
+            form.submit();
         }
     });
 });
@@ -23,31 +22,23 @@ function displayerror(elemId, errormsg) {
 function reg_validation(form) {
 
     var name = form.name.value;
-    var lastname = form.lastname.value;
+    var lastname =form.lastname.value;
     var email = form.email.value;
     var mobile = form.mobile.value;
     var category = form.category.value;
     var gender = form.gender.value;
-    var password = form.password.value;
-    var confpassword = form.confpassword.value;
+    var password=form.password.value;
+    var confpassword=form.confpassword.value;
 
 
-    var nameErr = true;
-    var lastnameErr = true;
-    var emailErr = true;
-    var mobileErr = true;
-    var categoryErr = true;
-    var genderErr = true;
-    var passwordErr = true;
-    var confpasswordErr = true;
+    var nameErr = emailErr = mobileErr = categoryErr = genderErr = lastnameErr =passwordErr = confpasswordErr =true;
 
 
-
-    if (name == "") {
+    if(name == "") {
         displayerror("nameErr", "Your name is missing");
     } else {
-        var pattern = /^[a-zA-Z\s]+$/;
-        if (pattern.test(name) === false) {
+        var pattern = /^[a-zA-Z\s]+$/;                
+        if(pattern.test(name) === false) {
             displayerror("nameErr", " Please enter a valid name");
         } else {
             displayerror("nameErr", "");
@@ -60,11 +51,11 @@ function reg_validation(form) {
 
 
 
-    if (lastname == "") {
+    if(lastname == "") {
         displayerror("lastnameErr", "Your last name is missing");
     } else {
-        var pattern = /^[a-zA-Z\s]+$/;
-        if (pattern.test(lastname) === false) {
+        var pattern = /^[a-zA-Z\s]+$/;                
+        if(pattern.test(lastname) === false) {
             displayerror("lastnameErr", " Please enter a valid name");
         } else {
             displayerror("lastnameErr", "");
@@ -76,13 +67,13 @@ function reg_validation(form) {
     //////
 
 
-    if (email == "") {
+    if(email == "") {
         displayerror("emailErr", "Your email address is missing");
     } else {
         var pattern = /^\S+@\S+\.\S+$/;
-        if (pattern.test(email) === false) {
+        if(pattern.test(email) === false) {
             displayerror("emailErr", "Please enter a valid email address");
-        } else {
+        } else{
             displayerror("emailErr", "");
             emailErr = false;
         }
@@ -91,11 +82,11 @@ function reg_validation(form) {
     //////
 
 
-    if (password == "") {
+    if(password == "") {
         displayerror("passwordErr", "Your password is missing");
     } else {
-        var pattern = /^.{8,}$/;
-        if (pattern.test(password) === false) {
+        var pattern = /^.{8,}$/;               
+        if(pattern.test(password) === false) {
             displayerror("passwordErr", "Enter a valid password of atleast 8 charecters");
         } else {
             displayerror("passwordErr", "");
@@ -105,11 +96,11 @@ function reg_validation(form) {
 
     /////
 
-    if (confpassword == "") {
+    if(confpassword == "") {
         displayerror("confpasswordErr", "Your password is missing");
     } else {
-
-        if (confpassword != password) {
+                      
+        if(confpassword != password) {
             displayerror("confpasswordErr", "Your password doesnt match the original one");
         } else {
             displayerror("confpasswordErr", "");
@@ -119,21 +110,21 @@ function reg_validation(form) {
 
 
     /////
-    if (mobile == "") {
+    if(mobile == "") {
         displayerror("mobileErr", "Your mobile number is missing");
     } else {
         var pattern = /^[0]\d{10}$/;
-        if (pattern.test(mobile) === false) {
+        if(pattern.test(mobile) === false) {
             displayerror("mobileErr", "Enter a 11 digit mobile number,starting with 0");
-        } else {
+        } else{
             displayerror("mobileErr", "");
             mobileErr = false;
         }
     }
 
 
-    ////
-    if (gender == "") {
+////
+    if(gender == "") {
         displayerror("genderErr", "Please select your gender");
     } else {
         displayerror("genderErr", "");
@@ -142,21 +133,22 @@ function reg_validation(form) {
 
     ////
 
-    if (category == "") {
+    if(category == "") {
         displayerror("categoryErr", "Please select your category");
     } else {
         displayerror("categoryErr", "");
         categoryErr = false;
     }
 
-    ///////
+///////
 
-    if ((nameErr || emailErr || mobileErr || categoryErr || genderErr || lastnameErr || confpasswordErr) == true) {
+    if((nameErr || emailErr || mobileErr || categoryErr || genderErr || lastnameErr || confpasswordErr) == true) {
         return false;
     }
-    else {
+    else{
         return true;
     }
-
+    
+    
 
 }

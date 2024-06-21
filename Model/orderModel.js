@@ -1,21 +1,26 @@
 const mongoose = require('mongoose');
 
+const User = require('./UserModel').UserSchema;
+
 const orderSchema = new mongoose.Schema({
     orderID: {
         type: String,
         required: true,
         unique: true
     },
-    clientID: {
-        type: String,
+    client: {
+        type: mongoose.Schema.Types.ObjectID,
+        ref: 'Users',
         required: true
     },
-    gigID: {
-        type: String,
+    gig: {
+        type: mongoose.Schema.Types.ObjectID,
+        ref: 'Gigs',
         required: true
     },
-    freelancerID: {
-        type: String,
+    freelancer: {
+        type: mongoose.Schema.Types.ObjectID,
+        ref: 'Users',
         required: true
     },
     status: {
