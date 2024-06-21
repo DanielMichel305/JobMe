@@ -19,10 +19,9 @@ const gigSchema = new mongoose.Schema({
         required: true,
         min: 0
     },
-    media_paths: {
-        type: [String],
-        unique: true
-    },
+    imgs: [{
+        data: Buffer
+    }],
     date_posted: {
         type: String,
         required: true

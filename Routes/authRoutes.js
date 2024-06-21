@@ -3,7 +3,26 @@ const router = require('express').Router();
 const passport = require('passport');
 const bcrypt = require("bcrypt");
 const bodyParser = require('body-parser');
+
+const multer = require('multer');
+const fs = require('fs');
+const path = require('path');
+/*
+var storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads')
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.filename + '-' + Date.now())
+    }
+});
+
+var upload = multer({storage: storage});
+*/
+const { default: mongoose } = require('mongoose');
+
 const { UserController } = require('../Controller/AuthController');
+
 
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
@@ -35,7 +54,10 @@ router.post('/signup', async (req,res)=>{
 
 router.get('/activate/:token', (req,res)=>{
     
-    UserController.activateUser(req,res);  
+
+    UserController.activateUser(req,res);
+
+
 });
 
 router.get('/logout', (req, res,next) => {
@@ -50,6 +72,28 @@ router.get('/logout', (req, res,next) => {
     
    
 });
+
+
+/*
+router.post('/newGig', upload.('image'), async (req, res) => {
+    let UserModel = require('../Model/UserModel');
+    let Gigs = require('../Model/gigModel');
+    Gigs.create({gigDescription: req.body.title, price: req.body.price, date_posted: Date.now(), freelancer: req.session.user});
+    for(let i = 0; i < Object.keys(req.body.files).length; i++){
+        gig.imgs.push({data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.body.files[i].filename))});
+    }
+    try{
+        user = User.findOne({email: req.session.user.email});
+        user.gigs.push(gig);
+        await gig.save();
+        await user.save();
+    }
+    catch(err){
+        res.json({error: "Error Creating account",error_description: "Failiure to add user", error_detail: err});
+    }
+
+});
+*/
 
 
 module.exports = router;
