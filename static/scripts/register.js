@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.querySelector('form[name="registerform"]');
 
@@ -149,4 +150,5 @@ function reg_validation(form) {
     }
     
     
+
 }
