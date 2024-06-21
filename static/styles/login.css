@@ -4,15 +4,20 @@
     padding: 0;
     font-family: 'poppins',sans-serif;
 }
+
+body{
+    background: url('https://img.lovepik.com/photo/40168/5398.jpg_wh860.jpg') no-repeat center center fixed;
+    background-size: cover; /* Use 'contain' instead of 'cover' to avoid scaling issues */
+    height: 100vh; /* Ensure the body takes up full viewport height */
+    width: 100%;
+}
+
 section{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: url('https://img.lovepik.com/photo/40168/5398.jpg_wh860.jpg')no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 .form-box{
     position: relative;
@@ -110,6 +115,7 @@ input:not(:placeholder-shown) ~ label {
     font-size: 1em;
     font-weight: 600;
     margin-bottom: 10px;
+    color: black;
 }
 .btnlog a{
     text-decoration: none;
