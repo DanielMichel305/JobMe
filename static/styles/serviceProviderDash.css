@@ -1,3 +1,12 @@
+*{
+    font-family: 'Poppins',sans-serif;
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #ffffff;
+}
+
 body{
     overflow-x: hidden;
     
@@ -67,4 +76,10 @@ body{
     /* border: solid 4px palevioletred; */
     box-shadow: 0 0 10px 7.5px pink;
     scale: 1.03;
+}
+#dashboard-title{
+   
+text-align: center;
+margin: 1rem;
+    
 }
