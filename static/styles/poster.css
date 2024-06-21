@@ -88,25 +88,4 @@ main{
     font-size:x-large;
     margin: 3%;
     
-<<<<<<< HEAD
-}
-
-#tabelText h3{
-    margin: 5%;
-    color: black;
-}
-
-#tabelz{
-    margin: 5%;
-    border :solid black;
-    width: fit-content;
-}
-#tabelz td,th{
-    padding: 5px;
-    height: max-content;
-    border :solid black;
-    color: black;
-    font-size: large;
-=======
->>>>>>> 3023bb9321d43c805426458e835b8aa152e778ac
 }

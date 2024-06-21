@@ -25,6 +25,7 @@ router.get('/google/callback',
 
 
 router.post('/signup', async (req,res)=>{
+
     
     
     const UserController = require('../Controller/AuthController').UserController;
@@ -34,7 +35,7 @@ router.post('/signup', async (req,res)=>{
 
 router.get('/activate/:token', (req,res)=>{
     
-    UserController.activateUser(req,res);
+    UserController.activateUser(req,res);  
 });
 
 router.get('/logout', (req, res,next) => {
