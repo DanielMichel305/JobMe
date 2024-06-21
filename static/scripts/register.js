@@ -3,12 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-        console.log("clciked");
+
         var isValid = reg_validation(form);
 
-        if (true) {
+        if (true) { //change when fixed pleaseee !!!!!!!
             form.submit();
-            console.log("submited");
         }
     });
 });

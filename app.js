@@ -4,11 +4,15 @@ const session = require('express-session')
 const passport = require('passport');
 const mongoose = require('mongoose');
 const path = require("path");
+
+const bcrypt = require("bcrypt");
+
 const http = require('http');
 const https = require('https');
 const fs = require('fs');
 
 require('./Model/dbScript');    ///Cron Job for confirming Hard Deletion into Hard Deletion
+
 
 const app = express();
 const port = 5000;
@@ -74,7 +78,7 @@ app.get("/register", (req, res) => {
 });
 
 app.get("/clientprofile", (req, res) => {
-  res.render("clientprofile");
+  res.render("clientprofile", req.session.user);
 });
 app.get("/clientpass", (req, res) => {
   res.render("clientpass");

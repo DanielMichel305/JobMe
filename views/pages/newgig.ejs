@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="styles/newgig.css">
+    
+</head>
+<body>
+    <div id="newgig-wrapper">
+
+        <div id="newgig-toggle">
+
+			<i class='bx bxs-book-add'></i>
+
+		</div>
+
+        <div class="container">
+        <h1 class="section-title centered">Create a New Gig</h1>
+        <form name ="gigForm" action="/auth/newGig" method="post">
+        <div class="section">
+            <div class="section-title">Gig TITLE</div>
+            <input type="text" placeholder="I will design a full elementor wordpress" name = 'title'>
+        </div>
+
+        <div id="add-photos-button"  >
+            <div class="section-title" >insert images</div>
+            <input type="file" multiple = "yes" accept="image/*" id="photos-button" name = 'files'>
+        </div>
+        <div class="section">
+            <div class="section-title" >CATEGORY</div>
+            <select id="categorySelect" onchange="updateServiceOptions()">
+                <option value="">Select category</option>
+                <option>PROGRAMMING & TECH</option>
+                <option>Graphics & Design</option>
+                <option>Digital Marketing</option>
+                <option>Video & Animation</option>
+                <option>Writing & Translation</option>
+                <option>Music & Audio</option>
+                <option>Business</option>
+                <option>Consulting</option>
+                <option>Data</option>
+                <option>AI Services</option>
+            </select>
+        </div>
+        <div class="section">
+            <div class="section-title">SERVICE TYPE</div>
+            <select id="serviceSelect">
+                <option value="">Select service type</option>
+            </select>
+        </div>
+        <div class="section">
+            <div class="section-title">GIG METADATA</div>
+            <select id="meta-data-text">
+                <option value="">Select meta data</option>
+                <option>Education</option>
+                <option>Entertainment</option>
+                <option>Business</option>
+                <option>Non-profit</option>
+            </select>
+        </div>
+        <div class="section">
+            <div class="section-title">GIG DESCRIPTION</div>
+            <input type="text" placeholder="Description of you gig">
+        </div>
+        <div class="section">
+            <div class="section-title">PRICE</div>
+            <input type="text" placeholder="Price" name = 'price' imgs: fs.readFileSync>
+        </div>
+        
+        <button class="button cancel-button">Cancel</button>
+        <button class="button save-button">Save</button>
+        </form>
+    </div>
+</div>
+
+    <script src="scripts/newgig.js"></script>
+</body>
+</html>
+
+
