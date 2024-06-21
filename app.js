@@ -11,7 +11,7 @@ const fs = require('fs');
 require('./Model/dbScript');    ///Cron Job for confirming Hard Deletion into Hard Deletion
 
 const app = express();
-const port = 5000;
+const port = 80;
 const bodyParser = require('body-parser')
 
 app.use( bodyParser.json() );       
