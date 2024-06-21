@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="styles/pay.css">
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <%- include("../partials/topbar") %>
+
+        <form name="paymentform" onsubmit="return pay_validation(this)" action="" method="post">
+
+            <div class="container">
+
+                <h1>CONFIRM YOUR PAYMENT</h1>
+                <div class="first-row">
+                    <div class="owner">
+                        <h3>Owner</h3>
+                        <div class="input-field">
+                            <input type="text" name="name">
+                        </div>
+                        <div class="Error" id="nameErr"></div>
+
+                    </div>
+
+                    <div class="total">
+                        <h3>Total</h3>
+                        <div class="amount">1,000 LE
+                        </div>
+                    </div>
+
+                </div>
+                <div class="second-row">
+                    <div class="card-number">
+                        <h3>Card Number</h3>
+                        <div class="input-field">
+                            <input type="text" name="card">
+                        </div>
+                        <div class="Error" id="cardErr"></div>
+                    </div>
+
+
+                    <div class="cvv">
+                        <h3>CVV</h3>
+                        <div class="input-field">
+                            <input type="text" name="cvv">
+                        </div>
+                        <div class="Error" id="cvvErr"></div>
+                    </div>
+
+
+                </div>
+                <div class="third-row">
+                    <h3>Expiry date</h3>
+                    <div class="selection">
+                        <div class="date">
+                            <select name="months" id="months">
+                                <option>Select</option>
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Apr">Apr</option>
+                                <option value="May">May</option>
+                                <option value="Jun">Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Aug">Aug</option>
+                                <option value="Sep">Sep</option>
+                                <option value="Oct">Oct</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dec">Dec</option>
+                            </select>
+                            <select name="years" id="years">
+                                <option>Select</option>
+                                <option value="2020">2024</option>
+                                <option value="2019">2025</option>
+                                <option value="2018">2026</option>
+                                <option value="2017">2027</option>
+                                <option value="2016">2028</option>
+                                <option value="2015">2029</option>
+                            </select>
+                        </div>
+                        <div class="cards">
+                            <img src="images/pay-img/mc.png" alt="master card picture">
+                            <img src="images/pay-img/vi.png" alt=" visa picture">
+                            <img src="images/pay-img/pp.png" alt="paypal picture">
+                        </div>
+                    </div>
+                    <div class="Error" id="expErr"></div>
+                </div>
+
+
+                <button class="btn" >confirm</button>
+
+
+        </form>
+        </div>
+        <%- include("../partials/footer")%>
+
+
+
+
+        <script src='scripts/pay.js'>	</script>
+    </body>
+
+
+</html>

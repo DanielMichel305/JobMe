@@ -38,7 +38,13 @@ window.addEventListener('DOMContentLoaded',function(){
             `
 
         });
-        this.document.getElementById("dash-services").innerHTML += "<button>Create New Service NOW!</button>"
+        /*const button = document.createElement('button');
+        button.textContent = 'Create New Service NOW!';
+        button.onclick = function() {
+        window.location.href = '/newgig';
+        };
+        document.getElementById("dash-services").appendChild(button);
+        */
         
     }
     let mostProfitableService = getMostRevenue();

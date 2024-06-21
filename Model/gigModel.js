@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const Order = require('./orderModel').orderSchema;
+const Order = require('./orderModel');
+const User = require('./UserModel');
 
 const gigSchema = new mongoose.Schema({
     gigID: {
@@ -18,15 +19,22 @@ const gigSchema = new mongoose.Schema({
         required: true,
         min: 0
     },
-    media_paths: {
-        type: [String],
-        unique: true
-    },
+    imgs: [{
+        data: Buffer
+    }],
     date_posted: {
         type: String,
         required: true
-    }/* ,
-    orders: [Order] */
+    },
+    freelancer: {
+        type: mongoose.Schema.Types.ObjectID,
+        ref: 'Users',
+        required: true
+    },
+    orders: [{
+        type: mongoose.Schema.Types.ObjectID,
+        ref: 'Orders',
+    }]
 }, {
     versionKey: false,
     strict: true
