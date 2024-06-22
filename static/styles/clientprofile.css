@@ -24,11 +24,11 @@ body {
 }
 
 .left {
-    width: 23%;
+    width: 18%;
     background-color: rgb(4, 4, 54);
     padding: 30px 25px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
     text-align: center;
     color: #fff;
     min-height: 750px;
@@ -37,7 +37,7 @@ body {
 
 .nav{
     margin-top: 6rem;
-    font-size: 1.2em;
+    font-size: 0.9em;
     font-weight: 700;
 }
 
@@ -55,7 +55,7 @@ body {
 }
 
 .right {
-    width: 100%;
+    width: 81.4%;
     height: 100%;
     background-color: rgb(255, 255, 255);
     padding: 30px 50px;
@@ -90,7 +90,7 @@ body {
 
 #i {
     
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: 900;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
@@ -197,43 +197,53 @@ body {
     display: block;
     flex-wrap: wrap; 
     justify-content: space-between; 
-    height: 35rem;
-    overflow:scroll;
+   max-height: 35rem;
+    overflow:auto;
+    margin: 0.6rem 0.6rem;
 
   }
   
   .orders-card {
     width: fit-content ;
     display: flex;
-    margin-top: 3rem;
-    
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-items: center; 
   }
   .cardType{
-    margin-left: 20rem;
+    margin-left: 8rem;
     width: max-content;
     display: flex;
+    align-items: left; 
+    flex-direction: column;
   }
   .orders-card p {
     color: rgb(0, 0, 0);
-    padding-top: 4rem;
+    margin: 0;
+  }
+  #cardtxt{
+    color: darkblue;
   }
   .images-div img{
-    width: 70%;
-    border-radius: 1rem;
+    width: 8rem;
+    
+   
   }
  
   .images-div{
     width: 100%;
     border-radius: 10px;
     margin-left: 4rem;
-    margin-bottom: 1rem;
+    padding-top: 0.2rem;
+    
   }
 
   .acard {
     color: rgb(0, 0, 0);
     display: flex;
-    width: max-content;
-    margin-left: 20rem;
+    margin-left: 12rem;
     margin-right: 2rem;
-    margin-top: 4rem;
+    align-items: center; 
+    flex-direction: column;
+    text-align: center;
   }
