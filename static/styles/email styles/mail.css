@@ -1,61 +1,72 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 body {
-    display: flex;
+     /* display: flex;  */
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Adding a generic font for readability */
 }
 
 .container {
-   
-    
-    display: flex;
+     /* display: flex;  */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5em 4em;
-    background-color: #fff; 
-    border: solid blue 2px;
-    box-shadow: 10px 10px 8px blue; 
-    border-radius: 8px; 
+    padding: 2em; /* Adjusted padding for smaller screens */
+    background-color: #fff;
+    border: 2px solid blue;
+    box-shadow: 5px 5px 8px blue; /* Adjusted box shadow for smaller screens */
+    border-radius: 8px;
+    max-width: 90%; /* Ensures container doesn't exceed screen width on smaller devices */
 }
 
-.txt{
-    font-size: 2.1em;
+.txt {
+    font-size: 1.8em; /* Adjusted font size for smaller screens */
     color: darkblue;
+    text-align: center; /* Center align text for better readability */
+    margin-bottom: 1em; /* Added margin bottom for better spacing */
 }
 
-
-.btn {
-    padding: 20px 30px;
+.btn, #btnhome {
+    padding: 15px 25px; /* Adjusted button padding for smaller screens */
     background-color: #1e61a8;
     color: white;
     border: none;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 30px; /* Adjusted margin top for better spacing */
+    margin-bottom: 30px; /* Adjusted margin bottom for better spacing */
     border-radius: 4px;
-    font-size: 1.2em;
+    font-size: 1.1em; /* Adjusted font size for smaller screens */
     cursor: pointer;
     text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition effect */
 }
 
 .btn:hover, #btnhome:hover {
     background-color: blue;
     transform: scale(1.1);
 }
-#btnhome{
-    padding: 20px 30px;
-    background-color: #1e61a8;
-    color: white;
-    border: none;
-    margin: 25px 40px;
-    border-radius: 4px;
-    font-size: 1.2em;
-    cursor: pointer;
-    text-decoration: none;
+
+/* Media query for screens smaller than 600px (typical phones) */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 1em; /* Further reduced padding for very small screens */
+    }
+
+    .txt {
+        font-size: 1.5em; /* Adjusted font size for very small screens */
+    }
+
+    .btn, #btnhome {
+        padding: 12px 20px; /* Further reduced button padding */
+        font-size: 1em; /* Adjusted font size for very small screens */
+        margin-top: 20px; /* Reduced margin top for very small screens */
+        margin-bottom: 20px; /* Reduced margin bottom for very small screens */
+    }
 }

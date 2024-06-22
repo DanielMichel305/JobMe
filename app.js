@@ -36,7 +36,7 @@ app.use(passport.session());
 
 
 app.use(express.static(path.join(__dirname,'static')));
-app.set('views', path.join(__dirname, 'views/pages'));
+app.set('views', path.join(__dirname, 'views/pages'));  /// add / pages 
 app.set('view engine', 'ejs');
 
 
@@ -94,6 +94,17 @@ app.get("/poster", (req, res) => {
 app.get('/protected',isLoggedIn ,(req,res)=>{
 
   res.send("Protected Page");
+
+})
+
+app.get("/payment", (req, res) => {
+  res.render("payment");
+});
+
+app.get('/verification', (req,res)=>{
+
+  const activationLink = {ActivationLink : "afbw"}
+  res.render("verification", activationLink);
 
 })
 

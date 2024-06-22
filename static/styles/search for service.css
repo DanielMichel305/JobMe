@@ -5,15 +5,17 @@
     padding:0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    color: #fff;
+    color: #ffffff;
 }
-
+body{
+    width: 100%;
+}
 .filtersList{
     position: sticky;
     width: 80%;
+    left: 10%;
     align-items: center;
     display: flex;
-    left:10%;
     margin-top: 20px;
     top: 0;
     z-index: 1;
@@ -81,8 +83,6 @@
     flex-wrap: wrap ;
 }
 .cards{
-
-    background-color: #0056b3;
     width: fit-content;
     height: fit-content;
     margin: 20px;
@@ -108,4 +108,28 @@
 
     transform: scale(1.1);
 
+}
+
+
+
+
+@media (max-width:600px){
+    body{
+        width:113%
+    }
+    .filtersList{
+        width:100%;
+        left: 0;;
+    }
+}
+
+
+@media (max-width:360px){
+    body{
+        width:130%
+    }
+    .filtersList{
+        width:100%;
+        left: 0;;
+    }
 }

@@ -6,7 +6,7 @@ searchBar.addEventListener("keypress", function(event){
     }
 });
 //searchbar auto resize
-function isOverflowing(el) { 
+/*function isOverflowing(el) { 
     let curOverf = el.style.overflow; 
      
     if ( !curOverf || curOverf === "visible" ) 
@@ -18,9 +18,9 @@ function isOverflowing(el) {
     el.style.overflow = curOverf; 
      
     return isOverflowing; 
-} 
+} */
 
-let body = document.body;
+/*let body = document.body;
 body.onresize = function(){
     if(isOverflowing(document.getElementById("topbar"))){
         let calcWidth = body.offsetWidth - 750;
@@ -32,7 +32,7 @@ body.onresize = function(){
     //console.log(searchBar.offsetWidth);
 }
 body.onresize();
-//end
+//end*/
 
 
 
@@ -61,3 +61,4 @@ customSelects.forEach(function (select) {
         }
     });
 });
+//end

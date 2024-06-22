@@ -8,55 +8,54 @@
     color: #ffffff;
 }
 
-body{
-    background-color: rgb(255, 255, 255);
-}
-#error-wrapper {
+#login-successfully-wrapper {
     display: grid;
     place-items: center;
     height: 100vh; 
-  }
-
-  #error-items{
-    width: 30%;
-    height:17rem;
-    border-radius: 0.4rem;
-    padding-bottom:2% ;
-  }
-
- 
-  #error-logo {
-    text-align: center;
-    font-size: 8rem;
-    color: rgb(0, 0, 0);
-    font-family: Comic Sans MS;
-  }
-
-  #error-text{
-    text-align: center;
-    font-size: 4rem;
-    margin-top: 1.3rem;
-    color: rgb(0, 0, 0);
     
   }
 
-  #error-button{
+  #Success-items{
+    background-color: aliceblue;
+    width: 30%;
+    height:40% ;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.1rem 0.5rem 0 black;
+  }
+
+ 
+  #login-successfully-logo {
+    text-align: center;
+    font-size: 5rem;
+    color: rgb(31, 197, 92);
+    margin-top: 2rem;
+  }
+
+  #login-successfully-text{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1.3rem;
+    
+  }
+
+  #login-successfully-button{
     text-align: center;
     font-size: 1.5rem;
     box-shadow: 0 0.1rem 0.5rem 0 black;
     width: 60%;
-    margin-left: 20%;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-left:5rem ;
     border-radius: 1rem;
     height: 2rem;
     transition: 0.7 ease;
-    background-color: rgb(255, 255, 255);
   }
  
-  #error-button:hover{
+  #login-successfully-button:hover{
     transform: scale(1.1);
-    background-color:rgb(255, 0, 0);
+    background-color:rgb(56, 56, 174);
   }
-  #Aerror{
+  #alogin-succ{
     text-decoration: none;
     color: black;
   } 
