@@ -8,7 +8,7 @@ const orders = [
     {
       imageUrl: "images/jobs/audio1.jpeg",
       type: "Programming & Tech",
-      link: "WebDevelopment",
+      link: "Web Development",
     },
     {
       imageUrl: "images/jobs/webDev.jpeg",
@@ -29,7 +29,7 @@ function createOrderCard(order) {
           <img src="${order.imageUrl}">
         </div>
         <div class="cardType">
-          <p>type:</p>
+          <p id="cardtxt">type:</p>
           <p>${order.type}</p>
         </div>
         <div class="cardText">
