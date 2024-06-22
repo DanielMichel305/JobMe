@@ -93,7 +93,7 @@ const UserController = {
       let emailContent = await readFile(path.join(__dirname,'../views/email_templates/verification.ejs'), 'utf8');
       console.log(`ACTIVATION TOKEN ${token}\n`);
       const activationLink = { 
-        ActivationLink : `http://localhost:5000/auth/activate/${token}`
+        ActivationLink : `http://localhost:80/auth/activate/${token}`
       };
       emailContent = ejs.render(emailContent, activationLink);
       console.log(emailContent);
@@ -119,22 +119,20 @@ const UserController = {
 
     async signUp(req,res){
 
-      const response = {
-        message : ""
-      }
+      let user;
       try{
-        if(!await User.findOne({email : req.body.email})){
-          //User Already exists
-          response.message = "Email associated with another account, Try to sign in.";
-          res.json(400)(response);
-          return;
-        }
+        user = await User.findOne({email : req.body.email});
+        console.log(user);  
       }
       catch(err){
-        response.message="Couldn't Signup, Server ERROR";
-        res.json(500)({response});
+        res.status(500).json({message : "Couldn't Signup, Server ERROR"});
         return;
-
+      }
+      if(user){
+        //User Already exists
+        res.status(400).json({message : "Email Found, Try to sign in or create a new account"});
+        return;
+        
       }
       
       
@@ -160,10 +158,11 @@ const UserController = {
 
       this.sendActivationMail(req.body.email, token.Activationtoken);
 
-      res.json({message: "Account Creation Success!"});
+      res.status(200).json({message: "Account Creation Success!"});
   },
 
   async activateUser(req,res){
+    
     const {token} = req.params;
     try{
       const userEmail = await UserAuth.findOne({Activation_TOKEN : token }, 'email');
@@ -173,7 +172,8 @@ const UserController = {
     catch(err){
       console.log(err);
     }
-    res.send("Account aactivated!");
+    
+
   }
 
 }

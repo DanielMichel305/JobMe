@@ -74,3 +74,14 @@ function validateForm() {
         }
     });
 }
+
+const newGigToggle = document.querySelector('#newgig-toggle');
+const newGigContainer = document.querySelector('.container');
+
+newGigToggle.addEventListener('click', function(){
+
+    newGigContainer.classList.toggle('show');
+
+})
+
+

@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="styles/newgig.css">
+    
 </head>
 <body>
-    <%- include("../partials/topbar") %>
-    <div class="container">
+    <div id="newgig-wrapper">
+
+        <div id="newgig-toggle">
+
+			<i class='bx bxs-book-add'></i>
+
+		</div>
+
+        <div class="container">
         <h1 class="section-title centered">Create a New Gig</h1>
         <form id="gigForm">
         <div class="section">
             <div class="section-title">Gig TITLE</div>
             <input type="text" placeholder="I will design a full elementor wordpress">
+        </div>
+
+        <div id="add-photos-button"  >
+            <div class="section-title" >insert images</div>
+            <input type="file" multiple accept="image/*" id="photos-button">
         </div>
         <div class="section">
             <div class="section-title" >CATEGORY</div>
@@ -36,7 +50,7 @@
         </div>
         <div class="section">
             <div class="section-title">GIG METADATA</div>
-            <select>
+            <select id="meta-data-text">
                 <option value="">Select meta data</option>
                 <option>Education</option>
                 <option>Entertainment</option>
@@ -57,7 +71,8 @@
         <div class="button save-button" onclick="validateForm()">Save</div>
         </form>
     </div>
-    <%- include("../partials/footer")%>
+</div>
+
     <script src="scripts/newgig.js"></script>
 </body>
 </html>

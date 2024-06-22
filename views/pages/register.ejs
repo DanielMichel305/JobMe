@@ -8,10 +8,12 @@
 </head>
 
 <body>
+    <%- include("../partials/topbar") %>
+
     <section>
         <div class="form-box-reg">
             <div class="form-value">
-                <form name="registerform"  action="" method="post">
+                <form name="registerform" action="" method="post">
                     <h2 id="signup">Sign up</h2>
 
                     <div class="inputbox" style="margin-bottom: 0px;">
@@ -67,16 +69,16 @@
 
                     <div class="radio-box"  style="margin-bottom: 0px;">
                         <label for="gender">Gender : </label>
-                        <label><input type="radio" id="gender" name="gender" value="male"> Male</label>
-                        <label><input type="radio" id="gender" name="gender" value="female"> Female</label> 
+                        <label><input type="radio" id="genderf" name="gender" value="male"> Male</label>
+                        <label><input type="radio" id="genderm" name="gender" value="female"> Female</label> 
                     </div>
                     <div class="error" id="genderErr"></div>
 
                     
                     <div class="radio-box"  style="margin-bottom: 0px;">
                         <label for="category">Category : </label>
-                        <label><input type="radio" id="category" name="category" value="client"> Client</label>
-                        <label><input type="radio" id="category" name="category" value="freelancer"> Freelancer</label> 
+                        <label><input type="radio" id="categoryc" name="category" value="client"> Client</label>
+                        <label><input type="radio" id="categoryf" name="category" value="freelancer"> Freelancer</label> 
                     </div>
                     <div class="error" id="categoryErr"></div>
 
@@ -88,7 +90,7 @@
                         <img src="images/logos/googleLogo.png" >
                         </div>
                         <div id="signin-with-google-text">
-                            <a href="#">Signin with Google</a>
+                            <a href="#">Signup with Google</a>
                         </div>
                         
                     </div>
@@ -111,6 +113,7 @@
         <p class="foot">Copyright @jobME!</p>
 
     </footer> -->
+    <%- include("../partials/footer")%>
 </body>
 
 </html>
