@@ -41,10 +41,12 @@ body {
 .cancel-button {
     background-color: #ccc;
     color: black;
+    width: 22%;
 }
 .save-button {
     background-color: rgb(15, 15, 140);
     color: white;
+    width: 22%;
 }
 .error {
     border-color: red;
@@ -59,15 +61,15 @@ option{
 #newgig-wrapper {
     position: fixed;
     display: flex;
-    bottom: 4rem;
-    right: 4rem;
+    bottom: 0.2rem;
+    right: 1rem;
     width: 8rem;
     height: 8rem;
   }
   
 #newgig-toggle {
-    width: 70%;
-    height: 70%;
+    width: 65%;
+    height: 65%;
     background: #0033ff;
     color: #F5F5F5;
     font-size: 2rem;
@@ -107,7 +109,7 @@ option{
   }
 
   .container.show {
-    transform: scale(0.6);
+    transform: scale(0.64);
    }
 
    #add-photos-button {
@@ -128,5 +130,3 @@ option{
     color: #000000;
     cursor: pointer;
   }
-
-  
