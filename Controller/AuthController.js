@@ -93,7 +93,7 @@ const UserController = {
       let emailContent = await readFile(path.join(__dirname,'../views/email_templates/verification.ejs'), 'utf8');
       console.log(`ACTIVATION TOKEN ${token}\n`);
       const activationLink = { 
-        ActivationLink : `http://localhost:5000/auth/activate/${token}`
+        ActivationLink : `http://localhost:80/auth/activate/${token}`
       };
       emailContent = ejs.render(emailContent, activationLink);
       console.log(emailContent);
@@ -162,6 +162,7 @@ const UserController = {
   },
 
   async activateUser(req,res){
+    
     const {token} = req.params;
     try{
       const userEmail = await UserAuth.findOne({Activation_TOKEN : token }, 'email');
@@ -171,7 +172,8 @@ const UserController = {
     catch(err){
       console.log(err);
     }
-    res.send("Account aactivated!");
+    
+
   }
 
 }
