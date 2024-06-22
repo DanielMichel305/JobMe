@@ -4,15 +4,20 @@
     padding: 0;
     font-family: 'poppins',sans-serif;
 }
+
+body{
+    background: url('https://img.lovepik.com/photo/40168/5398.jpg_wh860.jpg') no-repeat center center fixed;
+    background-size: cover; /* Use 'contain' instead of 'cover' to avoid scaling issues */
+    height: 100vh; /* Ensure the body takes up full viewport height */
+    width: 100%;
+}
+
 section{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: url('https://img.lovepik.com/photo/40168/5398.jpg_wh860.jpg')no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 .form-box{
     position: relative;
@@ -110,6 +115,7 @@ input:not(:placeholder-shown) ~ label {
     font-size: 1em;
     font-weight: 600;
     margin-bottom: 10px;
+    color: black;
 }
 .btnlog a{
     text-decoration: none;
@@ -177,6 +183,48 @@ background-color:blue;
     font-size: 90%;
     margin-bottom: 20px;
 }
+#googleSignin{
+    width: 100%;
+    height: 2.5rem;
+    background-color:white ;
+    display: flex;
+    transition: 0.7 ease;
+    border-radius: 2.5rem;
+    cursor: pointer;
+}
+
+#signin-with-google-image{
+    width: 20%;
+    margin-top: 0.25rem;
+    margin-left: 0.9rem;
+}
+#signin-with-google-image img{
+    
+    width: 3.5rem;
+    height: 2rem;
+   
+}
+
+#signin-with-google-text{
+
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+#signin-with-google-text a{
+    
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+
+}
+#googleSignin:hover{
+
+    transform: scale(1.115);
+    background-color:blue;
+
+}   
 
 /* .footer{
     
