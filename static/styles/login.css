@@ -117,6 +117,7 @@ input:not(:placeholder-shown) ~ label {
     margin-bottom: 10px;
     color: black;
 }
+
 .btnlog a{
     text-decoration: none;
 }
@@ -204,11 +205,15 @@ background-color:blue;
     height: 2rem;
    
 }
+#lo{
+    color: black;
+}
 
 #signin-with-google-text{
 
     margin-top: 0.5rem;
     margin-left: 0.5rem;
+    width: 100%;
 }
 
 #signin-with-google-text a{
