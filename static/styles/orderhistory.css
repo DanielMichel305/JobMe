@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins',sans-serif;
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #ffffff;
+}
+
+#clients-orders{
+    text-align: center;
+    margin: 1rem;
+    color: black;
+}
+#prev-orders {
+    margin-left: 5%;
+    margin-top: 2rem;
+    box-shadow: 0 0 0.5rem 0 black;
+    width: 90%;
+    border-radius: 1rem;
+    display: block;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    height: 35rem;
+    overflow:scroll;
+
+  }
+ 
+
+  .orders-card {
+    width: fit-content ;
+    display: flex;
+    margin-top: 3rem;
+    
+  }
+ 
+  .client-name p{
+    color: rgb(0, 0, 0);
+    display: flex;
+    width: max-content;
+    margin-left: 20rem;
+    margin-right: 15rem;
+    margin-top: 4rem;
+  }
+ 
+  .images-div img{
+    width: 30%;
+    border-radius: 1rem;
+  }
+ 
+  .images-div{
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+    
+  }
+
+  .acard {
+    color: rgb(0, 0, 0);
+    display: flex;
+    width: max-content;
+    margin-left: 11rem;
+    text-decoration: underline;
+    margin-top: 4rem;
+    font-weight: 600;
+  }
