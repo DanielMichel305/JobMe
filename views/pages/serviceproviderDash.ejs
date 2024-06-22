@@ -9,23 +9,32 @@
     
 </head>
 <body>
-    <%- include("../partials/nav")%>
-
-    <h1>Dashboard</h1>
-        <div id="dashboard-section-1">
-            <h1 class="section-header">Your Services</h1>
-            <div id="dash-services">
-            
-                
+    <%- include("../partials/topbar")%>
+        
+            <h1 id="dashboard-title">Freelancer Profile</h1>
+            <h1 class="section-header">About You</h1>
+            <div id="about-freelancer">
+                <p>name : freelancer-name</p>
+                <p>email : gmail</p>
+                <p>skills : my skills</p>
             </div>
-            
-        </div>
-        <div>
-            <h1 class="section-header">Your Statistics</h1>
-            <div  id="dash-statistics">
+            <div id="dashboard-section-1">
+                <h1 class="section-header">Your Services</h1>
+                <div id="dash-services">
+             
                 
+                </div>
+            
             </div>
-        </div>
+            <div>
+                <h1 class="section-header">Your Statistics</h1>
+                <div  id="dash-statistics">
+                
+                </div>
+            
+            </div>
+            <%- include("newgig")%>
+        
     <%- include("../partials/footer")%>
     
 

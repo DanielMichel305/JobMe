@@ -183,6 +183,48 @@ background-color:blue;
     font-size: 90%;
     margin-bottom: 20px;
 }
+#googleSignin{
+    width: 100%;
+    height: 2.5rem;
+    background-color:white ;
+    display: flex;
+    transition: 0.7 ease;
+    border-radius: 2.5rem;
+    cursor: pointer;
+}
+
+#signin-with-google-image{
+    width: 20%;
+    margin-top: 0.25rem;
+    margin-left: 0.9rem;
+}
+#signin-with-google-image img{
+    
+    width: 3.5rem;
+    height: 2rem;
+   
+}
+
+#signin-with-google-text{
+
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+#signin-with-google-text a{
+    
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+
+}
+#googleSignin:hover{
+
+    transform: scale(1.115);
+    background-color:blue;
+
+}   
 
 /* .footer{
     

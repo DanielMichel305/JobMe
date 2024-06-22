@@ -127,4 +127,7 @@ function reg_validation(form) {
     } else {
         return true;
     }
+
 }
+
+
