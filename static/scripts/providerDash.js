@@ -28,10 +28,10 @@ window.addEventListener('DOMContentLoaded',function(){
             this.document.getElementById("dash-services").innerHTML += `
             <div class=\"service-card\"> 
                 <h2>${service.name}</h2>
-                <h4 id="cardtxt">For ${service.price}$ / order</h4>
-                <p class="det">Total income: ${service.totalRev} $</p>
-                <p class="det">Overall rating: ${service.overall_Rate}</p>
-                <h5>created ${service.timeCreated} days ago</h5>
+                <h4>For ${service.price}$ / order</h4>
+                <p>Total income: ${service.totalRev} $</p>
+                <p>Overall rating: ${service.overall_Rate}</p>
+                <h6>created ${service.timeCreated} days ago</h6>
 
             </div>
 

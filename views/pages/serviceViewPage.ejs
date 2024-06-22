@@ -27,9 +27,6 @@
                             I will design comapny logo for you
                         </h1></i>
                         <div id = "sellerOverview">
-                            <div id="ProfileAvatar">
-                                <a href = "/poster"><img src="../../images/profile-avatar/avatar.png" alt="Avatar" style="color: black;"></a>
-                            </div>
                             <div id="profileNameText">
                                 <b><a href = "/poster">John Smith</a></b>
                                 <br>
@@ -163,7 +160,7 @@
                                 </div>
                             </div>
                             <div id="rightSideButton">
-                                    <input type="button" value = "Buy">
+                                <input type="button" value="Buy" onclick="window.location.href='/payment'">
                             </div>
                         </div>
                      
@@ -181,7 +178,6 @@
                         </div>
                     </div> 
                 </div>
-                <%- include("../partials/chatBox.ejs")%>
             </div>
         </main>
         <%- include("../partials/footer.ejs")%>

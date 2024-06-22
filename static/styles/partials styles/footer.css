@@ -7,17 +7,20 @@
     scroll-behavior: smooth;
     color: #ffffff;
 }
-
+body{
+    width: 100%;
+}
 #footer-col1, #footer-col2,#footer-col3{
     display: flex;
     flex-direction: column;
+    margin-right: 4rem;
     
 }
 
 #footer-col1, #footer-col1, #footer-col3, a, h2{
     color: #d9d9d9;
     text-decoration: none;
-    margin-left: 3.5%;
+    
 }
 #footer-col2, #footer-col3{
     margin-top: 9%;
@@ -69,3 +72,30 @@ footer{
     margin-left: 3lvw; 
 
 }
+
+@media (max-width:600px){
+    body{
+        width: 190%;
+    }
+    footer{
+        width: 120%;
+        margin-top: 420px;
+    }
+    #footer-social-section{
+       width: 120%;
+    }
+}
+
+@media (max-width:1200px){
+    body{
+        width: 190%;
+    }
+    footer{
+        width: 115%;
+        margin-top: 420px;
+    }
+    #footer-social-section{
+       width: 115%;
+    }
+}
+

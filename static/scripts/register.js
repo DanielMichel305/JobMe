@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Form validity before: " + isValid);
 
         if (isValid) {
-            // form.submit(); // Uncomment this line to allow form submission
+            form.submit(); // Uncomment this line to allow form submission
             console.log("Form validity after: " + isValid);
         }
     });

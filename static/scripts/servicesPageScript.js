@@ -32,3 +32,40 @@ filter_customSelects.forEach(function (select) {
     });
 });
 //end
+
+
+const jobs = [
+    {
+        image: "job1.jpg",
+        category: "Programming & Tech",
+        text: "C++ Projects"
+    },
+    {
+        image: "job2.jpeg",
+        category: "Programming & Tech",
+        text: "Java Projects"
+    },
+    
+];
+
+jobs.forEach((job) => {
+    const cardElement = document.createElement("div");
+    cardElement.className = "cards";
+
+    const imagesDiv = document.createElement("div");
+    imagesDiv.className = "images-div";
+    imagesDiv.innerHTML = `<img src="images/jobs/${job.image}">`;
+    cardElement.appendChild(imagesDiv);
+
+    const cardType = document.createElement("div");
+    cardType.className = "cardType";
+    cardType.textContent = job.category;
+    cardElement.appendChild(cardType);
+
+    const cardText = document.createElement("div");
+    cardText.className = "cardText";
+    cardText.innerHTML = `<a href="/service-view">${job.text}</a>`;
+    cardElement.appendChild(cardText);
+
+    document.querySelector(".jobs-div").appendChild(cardElement);
+});

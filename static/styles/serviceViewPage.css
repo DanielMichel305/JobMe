@@ -5,9 +5,10 @@
     padding:0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    color: #ffffff;
 }
-
+body{
+    width: 100%;
+}
 main{
     width: 100%;
     height: 100%;
@@ -33,13 +34,6 @@ main{
     display: flex;
     align-items: center;
 }
-#ProfileAvatar img{
-    vertical-align: middle;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 7px;
-  }
 
  #profileNameText a ,i{
  color: black;
@@ -168,13 +162,13 @@ main{
 #aboutSellerTitel h3{
     color: black;
     text-align: center;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
 #aboutMeHr{
     border: 0;
     height: 2px;
-    margin:18px 0;
+    margin:15px 0;
     position:relative;
     background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%);
 }
@@ -221,8 +215,6 @@ main{
     margin: 10px;
     width: 100%;
     border: 2px solid black;
-    
-    
 }
 
 #priceTag{
@@ -329,3 +321,122 @@ main{
     margin: 3%;
     
 }
+
+@media (max-width:600px){
+    
+    #serviceOverview h1{
+        
+        font-size: large;
+    }
+    .mySlides {
+        width: 100%; 
+        height: 50%;
+      }
+    .container img{
+        height: 100%;
+    }
+    .info{
+        margin-left: 5%;
+        left: 5%;
+        font-size: 50%;
+    }
+    #descriptionAboutSeller p{
+        font-size: 50%;
+    }
+    #rightSideText{
+        width: 140%;
+        font-size: 60%;
+    }
+    #purchaseBox{
+
+        width: 120%;
+    }
+    #priceTag{
+        width: 50%;
+        margin: 10%;
+    }
+    
+    #priceTag h3{
+        font-size: x-large;
+    }
+    
+    #priceHr{
+        height: 2px;
+        width: 70%;
+        bottom: 1rem;
+        font-size: 50%;
+    }
+    
+    #rightSideButton input{
+        width: 40%;
+        margin-left: 30%;
+        height: 40px;
+        font-size:x-large;
+    }
+
+    #contectBox{
+        width: 120%;
+    
+    }
+    
+}
+
+
+@media (max-width:1200px){
+    
+    .mySlides {
+        width: 100%; 
+        height: 50%;
+      }
+    .container img{
+        height: 100%;
+    }
+    .info{
+        margin-left: 5%;
+        left: 5%;
+        font-size: 50%;
+    }
+    #descriptionAboutSeller p{
+        font-size: 50%;
+    }
+    #rightSideText{
+        width: 140%;
+        font-size: 60%;
+        
+    }
+    #purchaseBox{
+        margin-top: 8.5rem;
+        width: 100%;
+    }
+    #priceTag{
+        width: 50%;
+        margin: 10%;
+    }
+    
+    #priceTag h3{
+        font-size: x-large;
+    }
+    
+    #priceHr{
+        height: 2px;
+        width: 70%;
+        bottom: 1rem;
+        font-size: 50%;
+    }
+    
+    #rightSideButton input{
+        width: 40%;
+        margin-left: 30%;
+        height: 40px;
+        font-size:x-large;
+    }
+
+    #contectBox{
+        width: 100%;
+    }
+
+
+    
+}
+
+

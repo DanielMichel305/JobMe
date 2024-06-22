@@ -1,42 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0px;
-    padding: 0px;
+*{
+    font-family: 'Poppins',sans-serif;
+    margin:0px;
+    padding:0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
     color: #ffffff;
 }
 
-body {
+body{
     overflow-x: hidden;
-
+    
 }
-
-.section-header {
+.section-header{
     position: relative;
     font-size: x-large;
-    left: 5%;
-    text-transform: uppercase;
-    font-size: 2rem;
-    color: #27cbff;
-    margin: 3rem 1rem;
+    left:5%;    
+    
 }
-
- h5{
-    color: white;
-}
-h3{
-    margin-top: 1rem;
-   color: darkblue;
-}
-#cardtxt{
-    color: white;
-}
-
-#dash-services,
-#dash-statistics {
+#dash-services, #dash-statistics{
     display: flex;
     justify-content: space-between;
     border: solid #27cbff 2px;
@@ -50,44 +32,35 @@ h3{
     backdrop-filter: blur(5.3px);
     margin-left: 5%;
     margin-inline: 5%;
-
+    
 }
-
-.service-card {
+.service-card{
     padding: 3%;
-    background-color: rgb(12, 83, 83);
+    background-color: antiquewhite;
     margin: 5%;
     width: 30%;
-    max-width: 65%;
+    max-width:65%;
     border-radius: 10px;
-
+    
 }
-
-.service-card h2 {
-    color: white;
-padding-left: 0px;;
+.service-card h2, h4{
+    color: #27cbff;
 }
-
-.service-card h4 {
+.service-card h4{
     position: relative;
+    left: 10%;
     translate: 0 -25%;
 }
-
-
-
-#dash-statistics {
+#dash-statistics{
     display: flex;
     flex-direction: column;
     padding: 5%;
-    color: red;
 }
-
-#dash-statistics h2 {
+#dash-statistics h2{
     translate: -5% -5%;
     color: #27cbff;
 }
-
-#dashboard-section-1 button {
+#dashboard-section-1 button{
 
     color: #ffffff;
     background-color: #27cbff;
@@ -95,40 +68,24 @@ padding-left: 0px;;
     padding: 1%;
     font-weight: 800;
     font-size: large;
-
+    
     border: solid 3px palevioletred;
     transition: 0.2s;
     margin: 0.3%;
 }
-
-#dashboard-section-1 button:hover {
+#dashboard-section-1 button:hover{
     /* border: solid 4px palevioletred; */
     box-shadow: 0 0 10px 7.5px pink;
     scale: 1.03;
 }
-p, h4{
-    color: darkblue;
-}
-#dashboard-title {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 3rem;
+#dashboard-title{
+   
+text-align: center;
+margin: 1rem;
     
-    color: rgb(9, 2, 51);
 }
 
-#hr{
-    border: 0;
-    height: 4px;
-    position:relative;
-    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 10%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%);
-}
-
-.det{
-    color: #27cbff;
-}
-
-#about-freelancer {
+#about-freelancer{
 
     display: block;
     justify-content: space-between;
@@ -146,7 +103,7 @@ p, h4{
 
 }
 
-#about-freelancer p {
+#about-freelancer p{
     font-size: 1.5rem;
     font-weight: 500;
     margin: 1rem;

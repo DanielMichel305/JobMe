@@ -150,4 +150,14 @@ header{
 
 
 
-  
+  @media (max-width:600px){
+    .topbarContainer{
+        width: 120%;
+    }
+  }
+
+  @media (max-width:1200px){
+    .topbarContainer{
+        width: 115%;
+    }
+  }
