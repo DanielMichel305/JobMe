@@ -1,16 +1,3 @@
-
-document.addEventListener("DOMContentLoaded", function() {
-    var form = document.querySelector('form[name="gigForm"]');
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        if (true) {
-            form.submit();
-        }
-    });
-});
-
-
 function updateServiceOptions() {
     var categorySelect = document.getElementById("categorySelect");
     var serviceSelect = document.getElementById("serviceSelect");
@@ -86,7 +73,6 @@ function validateForm() {
             input.removeAttribute('placeholder');
         }
     });
-
 }
 
 const newGigToggle = document.querySelector('#newgig-toggle');
@@ -96,8 +82,6 @@ newGigToggle.addEventListener('click', function(){
 
     newGigContainer.classList.toggle('show');
 
-});
+})
 
-
-}
 

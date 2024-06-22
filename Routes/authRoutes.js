@@ -7,6 +7,9 @@ const bodyParser = require('body-parser');
 const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
+
+
+
 /*
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -52,12 +55,39 @@ router.post('/signup', async (req,res)=>{
 
 });
 
-router.get('/activate/:token', (req,res)=>{
+router.get('/activate/:token', async (req,res)=>{
     
 
     UserController.activateUser(req,res);
+    const activationScreen = await fs.readFileSync(path.join(__dirname,'../views/email_templates/mail-success.ejs'), 'utf8');
+    console.log(`\n-------ACT SCREEN ------\n\n${activationScreen}\n\n----------------\n`);
+  
+    res.render('../email_templates/mail-success');
+    return;
 
+});
 
+router.post('/signin', async (req, res) => {
+    let UserModel = require('../Model/UserModel');
+    user = await UserModel.findOne({email: req.body.email});
+    if(user){
+        //console.log(user);
+        bcrypt.compare(req.body.password, user.password, (err, result) => {
+            //console.log(result);
+            if(result == true){
+                req.session.user = user;
+                req.session.user.category ?  res.redirect('/') : res.redirect('/services')
+            }
+            else{
+                req.session.user = undefined;
+                res.redirect('/login');
+            }
+        });
+    }
+    else{
+        req.session.user = undefined;
+        res.redirect('/login');
+    }
 });
 
 router.get('/logout', (req, res,next) => {

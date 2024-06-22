@@ -1,5 +1,12 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins',sans-serif;
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #ffffff;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -11,17 +18,6 @@ body {
 .section {
     margin-bottom: 20px;
     
-
-
-.container {
-    width: 60%;
-    margin: auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 1%;
-}
-
 }
 .section input, .section select {
     width: 100%;
@@ -29,9 +25,7 @@ body {
     margin-top: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-
     color: black;
-
 }
 .section-title {
     font-weight: bold;
@@ -43,9 +37,6 @@ body {
     cursor: pointer;
     border-radius: 5px;
     border: none;
-
-    width: 100%;
-
 }
 .cancel-button {
     background-color: #ccc;
@@ -57,7 +48,6 @@ body {
 }
 .error {
     border-color: red;
-
 }
 
 option{
@@ -102,7 +92,7 @@ option{
     position: absolute;
     bottom: calc(100% - 3rem );
     right: 0;
-    width: 1400px;
+    width: 1800px;
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 1);
@@ -117,7 +107,7 @@ option{
   }
 
   .container.show {
-    transform: scale(0.7);
+    transform: scale(0.8);
    }
 
    #add-photos-button {
@@ -140,6 +130,3 @@ option{
   }
 
   
-
-
-

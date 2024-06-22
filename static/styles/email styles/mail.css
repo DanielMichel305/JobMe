@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activation</title>
-
-    <style>
-
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +5,7 @@
 }
 
 body {
-     display: flex; 
+     /* display: flex;  */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -24,7 +15,7 @@ body {
 }
 
 .container {
-     display: flex; 
+     /* display: flex;  */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -79,14 +70,3 @@ body {
         margin-bottom: 20px; /* Reduced margin bottom for very small screens */
     }
 }
-
-    </style>
-</head>
-<body>
-    <div class="container">
-    <p class="txt">Find the link to activate your account below </p>
-    <a class="btn" href="<%= ActivationLink %>"> Activate account</a>
-    <p class="txt"> If you didnt register you can ignore this email!</p>
-    </div>
-</body>
-</html>
