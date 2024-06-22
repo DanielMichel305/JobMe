@@ -154,7 +154,7 @@ header{
 
   
 
-/*
+
 
   @media (max-width: 600px) {
 
@@ -195,7 +195,4 @@ header{
       width: calc(100% -  env(safe-area-inset-left) - env(safe-area-inset-right));
     }
 
-  }*/
-
-  
-
+  }

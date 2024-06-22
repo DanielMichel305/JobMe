@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.querySelector('form[name="registerform"]');
 

@@ -1,0 +1,58 @@
+#clients-orders{
+    text-align: center;
+    margin: 1rem;
+    color: black;
+}
+#prev-orders {
+    margin-left: 5%;
+    margin-top: 2rem;
+    box-shadow: 0 0 0.5rem 0 black;
+    width: 90%;
+    border-radius: 1rem;
+    display: block;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    height: 35rem;
+    overflow:scroll;
+
+  }
+ 
+
+  .orders-card {
+    width: fit-content ;
+    display: flex;
+    margin-top: 3rem;
+    
+  }
+ 
+  .client-name p{
+    color: rgb(0, 0, 0);
+    display: flex;
+    width: max-content;
+    margin-left: 20rem;
+    margin-right: 15rem;
+    margin-top: 4rem;
+  }
+ 
+  .images-div img{
+    width: 30%;
+    border-radius: 1rem;
+  }
+ 
+  .images-div{
+    width: 100%;
+    border-radius: 10px;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+    
+  }
+
+  .acard {
+    color: rgb(0, 0, 0);
+    display: flex;
+    width: max-content;
+    margin-left: 11rem;
+    text-decoration: underline;
+    margin-top: 4rem;
+    font-weight: 600;
+  }

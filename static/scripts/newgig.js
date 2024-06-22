@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.querySelector('form[name="gigForm"]');
 
@@ -97,7 +96,3 @@ newGigToggle.addEventListener('click', function(){
     newGigContainer.classList.toggle('show');
 
 });
-
-
-}
-

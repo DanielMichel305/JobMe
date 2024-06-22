@@ -5,63 +5,90 @@ main{
 
 #middle-container{
     position: relative;
-    display: flex;
-    width: 80%;
+    width: 90%;
     height: 100%;
-    left: 10%;
+    left: 5%;
     top: 20px;
-    border:  5px solid black;
+    border-radius: 1%;
+    box-shadow: 0 0rem 1rem 0 black;
+    padding: 3%;
 }
 
-#leftSide{
-    position: relative;
-    width: 60%;
-    height: 100%;
-}
-#rightSide{
-    position: relative;
-    width: 40%;
-    padding: 10px;
-    height: 100%;
+#profileNameText p{
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    margin: 3%s;
 }
 
-#profilebox{
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin:5%;
+#aboutSellerText{
+    margin: 5%;
     
 }
-#ProfileAvatar img{
-    vertical-align: middle;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 7px;
-  }
 
- #profileNameText p{
- color: black;
- }
-
- #aboutSellerText{
-    margin: 5%;
- }
-
- #aboutSellerText h3,i {
+#aboutSellerText h3 , i{
     color: black;
-  }
+}
  
-  #discription h3,p{
-     margin-bottom: 2%;
-  }
-  #sellerSkills h3,p{
-    margin-bottom: 2%;
- }
- #contectBox{
+#discription h3{
+    padding-bottom: 1%;
+}
+#sellerSkills h3{
+
+    padding-bottom: 1%;
+
+}
+#freelancer-gigs h3{
+    padding-bottom: 3%;
+}
+
+
+
+
+#freelancer-services{
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #000000;
+    background-color: #d4f1f8;
+    width: 100%;
+    justify-content:center;
+    grid-template-columns: repeat(3);
+    flex-direction: row ;
+    flex-wrap: wrap ;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    
+}
+
+.service-card{
+    padding: 1%;
+    background-color:#007bff; 
+    box-shadow: 0px 0px 5px #000000;
+    margin: 3%;
+    width: fit-content;
+    max-width:65%;
+    border-radius: 10px;
+    height: fit-content;
+    margin: 20px;
+        
+}
+
+.service-card p{
+
+    color: #000000;
+    
+}
+
+.service-card img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#contectBox{
     box-shadow: 0px 0px 5px 1px rgb(155, 208, 226);
     border-radius: 12px;
-    margin: 25% 10%;
+    margin: 15% 10%;
     width: 80%;
     text-align: center;
     padding: 3px;
