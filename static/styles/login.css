@@ -119,6 +119,7 @@ input:not(:placeholder-shown) ~ label {
 }
 .btnlog a{
     text-decoration: none;
+    color: #000000;
 }
 .remember{
         margin: -15px 0 15px ;
@@ -143,7 +144,7 @@ background-color:blue;
     
 }
 .forget label a{
-    color: #fff;
+    color: #000000;
     text-decoration: none;
 }
 .forget label a:hover{
