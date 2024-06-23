@@ -43,24 +43,53 @@ return num < 10 ? '0' + num : num;
 const chatBoxContainer = document.querySelector('#chatbox-content');
 const chatBoxNoMessage = document.querySelector('#chatbox-no-message');
 
-function writeMessage(){
-    const time = new Date();
-    let message = `
-    <div class="chatbox-message-item sent">
-        <span class="chatbox-message-item-text">
-            ${textArea.value.trim().replace(/\n/g, '<br>\n')}
-        </span>
-        <span class="chatbox-message-item-time">${addZero(time.getHours() - 12 )} : ${addZero(time.getMinutes())}</span>
-    </div>
-     `;
+const ws = new WebSocket('ws://localhost:8080');
 
-     chatBoxContainer.insertAdjacentHTML('beforeend' , message);
-     chatBoxForm.computedStyleMap.alignitems = 'center';
-     textArea.rows = 1;
-     textArea.focus();
-     textArea.value='';
-     chatBoxNoMessage.style.display = 'none';
-     startBottomScroll();
+ws.onopen = () => {
+    console.log('Connected to WebSocket server');
+};
+
+ws.onmessage = (event) => {
+    const messageData = event.data;
+    displayReceivedMessage(messageData);
+};
+
+function writeMessage() {
+    const time = new Date();
+    let message = textArea.value.trim().replace(/\n/g, '<br>\n');
+    
+    const messageObject = {
+        type: 'sent',
+        text: message,
+        time: `${addZero(time.getHours() - 12)}:${addZero(time.getMinutes())}`
+    };
+    
+    ws.send(JSON.stringify(messageObject));
+    
+    displayMessage('sent', message, messageObject.time);
+    textArea.rows = 1;
+    textArea.focus();
+    textArea.value = '';
+    chatBoxNoMessage.style.display = 'none';
+    startBottomScroll();
+}
+
+function displayMessage(type, text, time) {
+    let message = `
+    <div class="chatbox-message-item ${type}">
+        <span class="chatbox-message-item-text">
+            ${text}
+        </span>
+        <span class="chatbox-message-item-time">${time}</span>
+    </div>`;
+    
+    chatBoxContainer.insertAdjacentHTML('beforeend', message);
+    startBottomScroll();
+}
+
+function displayReceivedMessage(data) {
+    const messageObject = JSON.parse(data);
+    displayMessage('received', messageObject.text, messageObject.time);
 }
 
 //ll test l7d ma nl2y alyrod

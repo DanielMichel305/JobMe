@@ -11,6 +11,7 @@ const path = require("path");
 const http = require('http');
 const https = require('https');
 const fs = require('fs');
+const WebSocket = require('ws');
 
 require('./Model/dbScript');    ///Cron Job for confirming Hard Deletion into Hard Deletion
 
@@ -23,6 +24,26 @@ app.use(bodyParser.urlencoded({
   extended: true
 })); 
 
+const wss = new WebSocket.Server({ server });
+
+// WebSocket server setup
+wss.on('connection', (ws) => {
+    console.log('Client connected');
+
+    ws.on('message', (message) => {
+        console.log('Received:', message);
+        // Broadcast the message to all connected clients
+        wss.clients.forEach((client) => {
+            if (client !== ws && client.readyState === WebSocket.OPEN) {
+                client.send(message);
+            }
+        });
+    });
+
+    ws.on('close', () => {
+        console.log('Client disconnected');
+    });
+});
 
 /*
 const privateKey = fs.readFileSync('./certs/key.pem', 'utf8');
