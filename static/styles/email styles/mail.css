@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-sizing: border-box; 
 }
 
 body {
@@ -11,7 +11,7 @@ body {
     height: 100vh;
     background-color: #f0f0f0;
     margin: 0;
-    font-family: Arial, sans-serif; /* Adding a generic font for readability */
+    font-family: Arial, sans-serif; 
 }
 
 .container {
@@ -19,33 +19,48 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2em; /* Adjusted padding for smaller screens */
+    padding: 2em; 
     background-color: #fff;
     border: 2px solid blue;
-    box-shadow: 5px 5px 8px blue; /* Adjusted box shadow for smaller screens */
+    box-shadow: 5px 5px 8px blue;
     border-radius: 8px;
-    max-width: 90%; /* Ensures container doesn't exceed screen width on smaller devices */
+    max-width: 90%; 
+}
+#succont{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em; 
+    background-color: #fff;
+    border: 2px solid blue;
+    box-shadow: 5px 5px 8px blue;
+    border-radius: 8px;
+    max-width: 90%; 
+    margin: 5rem 8rem;
+    padding: 4rem 4rem;
 }
 
 .txt {
-    font-size: 1.8em; /* Adjusted font size for smaller screens */
+    font-size: 1.8em; 
     color: darkblue;
-    text-align: center; /* Center align text for better readability */
-    margin-bottom: 1em; /* Added margin bottom for better spacing */
+    text-align: center; 
+    margin-bottom: 1em; 
 }
-
+#suctxt{
+    font-size: 2.5rem;
+}
 .btn, #btnhome {
-    padding: 15px 25px; /* Adjusted button padding for smaller screens */
+    padding: 15px 25px; 
     background-color: #1e61a8;
     color: white;
     border: none;
-    margin-top: 30px; /* Adjusted margin top for better spacing */
-    margin-bottom: 30px; /* Adjusted margin bottom for better spacing */
+    margin-top: 30px; 
+    margin-bottom: 30px; 
     border-radius: 4px;
-    font-size: 1.1em; /* Adjusted font size for smaller screens */
+    font-size: 1.1em; 
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s; /* Added transition effect */
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
 .btn:hover, #btnhome:hover {
@@ -53,20 +68,23 @@ body {
     transform: scale(1.1);
 }
 
-/* Media query for screens smaller than 600px (typical phones) */
+#sucbtn{
+    margin-left: 21rem;
+}
+
 @media screen and (max-width: 600px) {
     .container {
-        padding: 1em; /* Further reduced padding for very small screens */
+        padding: 1em; 
     }
 
     .txt {
-        font-size: 1.5em; /* Adjusted font size for very small screens */
+        font-size: 1.5em; 
     }
 
     .btn, #btnhome {
-        padding: 12px 20px; /* Further reduced button padding */
-        font-size: 1em; /* Adjusted font size for very small screens */
-        margin-top: 20px; /* Reduced margin top for very small screens */
-        margin-bottom: 20px; /* Reduced margin bottom for very small screens */
+        padding: 12px 20px; 
+        font-size: 1em; 
+        margin-top: 20px; 
+        margin-bottom: 20px; 
     }
 }
