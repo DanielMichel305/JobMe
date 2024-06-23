@@ -104,8 +104,8 @@ router.get('/logout', (req, res,next) => {
 });
 
 
-/*
-router.post('/newGig', upload.('image'), async (req, res) => {
+
+router.post('/newGig', upload.single('image'), async (req, res) => {
     let UserModel = require('../Model/UserModel');
     let Gigs = require('../Model/gigModel');
     Gigs.create({gigDescription: req.body.title, price: req.body.price, date_posted: Date.now(), freelancer: req.session.user});
@@ -123,7 +123,7 @@ router.post('/newGig', upload.('image'), async (req, res) => {
     }
 
 });
-*/
+
 
 
 module.exports = router;
