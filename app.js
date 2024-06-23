@@ -84,12 +84,27 @@ app.get("/clienthistory", (req, res) => {
   res.render("clienthistory");
 });
 
+app.get("/index", (req, res) => {
+  res.render("index");
+});
 
+app.get("/error404", (req, res) => {
+  res.render("error404");
+});
+app.get("/orderhistory", (req, res) => {
+  res.render("orderhistory");
+});
+
+app.get("/mail-success", (req, res) => {
+  res.render("mail-success");
+});
 
 app.get("/poster", (req, res) => {
 
   res.render("poster");
 });
+
+
 
 app.get('/protected',isLoggedIn ,(req,res)=>{
 
@@ -97,9 +112,12 @@ app.get('/protected',isLoggedIn ,(req,res)=>{
 
 })
 
+
 app.get("/payment", (req, res) => {
   res.render("payment");
 });
+
+
 
 app.get('/verification', (req,res)=>{
 
@@ -112,6 +130,7 @@ app.get('/verification', (req,res)=>{
 httpsServer.listen(443, () => {
   console.log('HTTPS Server running on port 443');
 }); */
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
