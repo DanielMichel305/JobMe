@@ -197,7 +197,7 @@ body {
     display: block;
     flex-wrap: wrap; 
     justify-content: space-between; 
-   max-height: 35rem;
+    max-height: 35rem;
     overflow:auto;
     margin: 0.6rem 0.6rem;
 
@@ -209,6 +209,7 @@ body {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     align-items: center; 
+    
   }
   .cardType{
     margin-left: 8rem;
@@ -226,8 +227,6 @@ body {
   }
   .images-div img{
     width: 8rem;
-    
-   
   }
  
   .images-div{
@@ -235,7 +234,6 @@ body {
     border-radius: 10px;
     margin-left: 4rem;
     padding-top: 0.2rem;
-    
   }
 
   .acard {
