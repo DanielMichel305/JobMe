@@ -63,7 +63,13 @@ function updateServiceOptions() {
 
 function validateForm() {
     var inputs = document.querySelectorAll('input[type="text"], select'); 
+    const priceInput = document.getElementById('priceInput');
+    const priceValue = priceInput.value;
 
+    if (!/^\d+(\.\d{1,2})?$/.test(priceValue)) {
+        alert('Please enter a valid price (numbers only).');
+        return false;
+    }
     inputs.forEach(function(input) {
         if (input.value.trim() === '' || input.value === '') { 
             input.style.borderColor = 'red'; 
